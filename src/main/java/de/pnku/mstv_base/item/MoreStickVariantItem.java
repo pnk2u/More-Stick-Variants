@@ -47,7 +47,7 @@ public class MoreStickVariantItem extends Item {
             case "warped" -> {
                 return Items.WARPED_PLANKS;
             }
-            case null, default -> {
+            default -> {
                 return null;
             }
         }
@@ -84,7 +84,7 @@ public class MoreStickVariantItem extends Item {
             case "warped" -> {
                 return MoreStickVariantItems.WARPED_STICK;
             }
-            case null, default -> {
+            default -> {
                 return Items.STICK;
             }
         }
