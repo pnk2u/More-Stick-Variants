@@ -5,17 +5,14 @@ import de.pnku.mstv_base.item.MoreStickVariantItem;
 import de.pnku.mstv_base.item.MoreStickVariantItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Item;
 
-import java.util.concurrent.CompletableFuture;
-
 public class MoreStickVariantRecipeGenerator extends FabricRecipeProvider {
-    public MoreStickVariantRecipeGenerator(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
-        super(output, registriesFuture);
+    public MoreStickVariantRecipeGenerator(FabricDataOutput output) {
+        super(output);
     }
 
     @Override
