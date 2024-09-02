@@ -7,7 +7,7 @@
       "item": "minecraft:bamboo_planks"
     },
     "X": {
-      "item": "mstv-base:bamboo_stick"
+      "item": "minecraft:bamboo"
     }
   },
   "pattern": [
