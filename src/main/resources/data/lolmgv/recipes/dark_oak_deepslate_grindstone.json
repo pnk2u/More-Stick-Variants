@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "lolmgv"
+      ]
+    }
+  ],
+  "category": "building",
+  "group": "deepslate_grindstones",
+  "key": {
+    "-": {
+      "tag": "lolmgv:deepslate_grindstone_ingredients"
+    },
+    "P": {
+      "item": "minecraft:dark_oak_planks"
+    },
+    "|": {
+      "item": "mstv-base:dark_oak_stick"
+    }
+  },
+  "pattern": [
+    "|-|",
+    "P P"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lolmgv:dark_oak_deepslate_grindstone"
+  }
+}
