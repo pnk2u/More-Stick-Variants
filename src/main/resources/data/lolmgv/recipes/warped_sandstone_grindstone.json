@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "lolmgv"
+      ]
+    }
+  ],
+  "category": "building",
+  "group": "sandstone_grindstones",
+  "key": {
+    "-": {
+      "tag": "lolmgv:sandstone_grindstone_ingredients"
+    },
+    "P": {
+      "item": "minecraft:warped_planks"
+    },
+    "|": {
+      "item": "mstv-base:warped_stick"
+    }
+  },
+  "pattern": [
+    "|-|",
+    "P P"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lolmgv:warped_sandstone_grindstone"
+  }
+}
