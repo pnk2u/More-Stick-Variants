@@ -4,13 +4,13 @@
   "group": "powered_rail",
   "key": {
     "#": {
-      "tag": "mstv-base:sticks"
+      "tag": "mstv-base:stick_variants"
     },
     "R": {
       "item": "minecraft:redstone"
     },
     "X": {
-      "item": "minecraft:gold_ingot"
+      "tag": "c:ingots/gold"
     }
   },
   "pattern": [
@@ -20,6 +20,6 @@
   ],
   "result": {
     "count": 6,
-    "item": "minecraft:powered_rail"
+    "id": "minecraft:powered_rail"
   }
 }

@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "tripwire_hook",
   "category": "redstone",
+  "group": "tripwire_hook",
   "key": {
     "#": {
       "tag": "minecraft:planks"
     },
     "I": {
-      "item": "minecraft:iron_ingot"
+      "tag": "c:ingots/iron"
     },
     "S": {
-      "tag": "mstv-base:sticks"
+      "tag": "mstv-base:stick_variants"
     }
   },
   "pattern": [
@@ -20,6 +20,6 @@
   ],
   "result": {
     "count": 2,
-    "item": "minecraft:tripwire_hook"
+    "id": "minecraft:tripwire_hook"
   }
 }
