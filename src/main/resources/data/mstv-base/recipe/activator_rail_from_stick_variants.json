@@ -7,10 +7,10 @@
       "item": "minecraft:redstone_torch"
     },
     "S": {
-      "tag": "mstv-base:sticks"
+      "tag": "mstv-base:stick_variants"
     },
     "X": {
-      "item": "minecraft:iron_ingot"
+      "tag": "c:ingots/iron"
     }
   },
   "pattern": [
