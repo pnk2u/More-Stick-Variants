@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "fabric:load_conditions": [
+    {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "nemos-campfires"
+        ]
+    }
+  ],
+  "group": "campfires",
+  "key": {
+    "C": {
+      "tag": "minecraft:coals"
+    },
+    "L": {
+      "tag": "minecraft:cherry_logs"
+    },
+    "S": {
+      "tag": "mstv-base:stick_variants"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SCS",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nemos-campfires:cherry_campfire"
+  }
+}
