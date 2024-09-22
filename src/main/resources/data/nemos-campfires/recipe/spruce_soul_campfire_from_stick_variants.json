@@ -1,13 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "fabric:load_conditions": [
+    {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "nemos-campfires"
+        ]
+    }
+  ],
   "group": "soul_campfires",
   "key": {
     "#": {
       "tag": "minecraft:soul_fire_base_blocks"
     },
     "L": {
-      "tag": "minecraft:cherry_logs"
+      "tag": "minecraft:spruce_logs"
     },
     "S": {
       "tag": "mstv-base:stick_variants"
@@ -20,6 +28,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "nemos-campfires:cherry_soul_campfire"
+    "id": "nemos-campfires:spruce_soul_campfire"
   }
 }

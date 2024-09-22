@@ -1,13 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "fabric:load_conditions": [
+    {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "nemos-campfires"
+        ]
+    }
+  ],
   "group": "campfires",
   "key": {
     "C": {
       "tag": "minecraft:coals"
     },
     "L": {
-      "tag": "minecraft:jungle_logs"
+      "tag": "minecraft:warped_stems"
     },
     "S": {
       "tag": "mstv-base:stick_variants"
@@ -20,6 +28,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "nemos-campfires:jungle_campfire"
+    "id": "nemos-campfires:warped_campfire"
   }
 }

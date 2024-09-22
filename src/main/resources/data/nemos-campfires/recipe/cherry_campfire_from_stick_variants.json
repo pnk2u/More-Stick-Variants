@@ -1,6 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "fabric:load_conditions": [
+    {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "nemos-campfires"
+        ]
+    }
+  ],
   "group": "campfires",
   "key": {
     "C": {

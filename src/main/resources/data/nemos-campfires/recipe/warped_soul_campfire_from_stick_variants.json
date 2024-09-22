@@ -1,13 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "fabric:load_conditions": [
+    {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "nemos-campfires"
+        ]
+    }
+  ],
   "group": "soul_campfires",
   "key": {
     "#": {
       "tag": "minecraft:soul_fire_base_blocks"
     },
     "L": {
-      "tag": "minecraft:acacia_logs"
+      "tag": "minecraft:warped_stems"
     },
     "S": {
       "tag": "mstv-base:stick_variants"
@@ -20,6 +28,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "nemos-campfires:acacia_soul_campfire"
+    "id": "nemos-campfires:warped_soul_campfire"
   }
 }
