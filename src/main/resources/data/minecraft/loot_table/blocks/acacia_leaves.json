@@ -25,7 +25,7 @@
                         "predicates": {
                           "minecraft:enchantments": [
                             {
-                              "enchantment": "minecraft:silk_touch",
+                              "enchantments": "minecraft:silk_touch",
                               "levels": {
                                 "min": 1
                               }
@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "minecraft:cherry_leaves"
+              "name": "minecraft:acacia_leaves"
             },
             {
               "type": "minecraft:item",
@@ -56,7 +56,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "minecraft:cherry_sapling"
+              "name": "minecraft:acacia_sapling"
             }
           ]
         }
@@ -83,7 +83,7 @@
                   "predicates": {
                     "minecraft:enchantments": [
                       {
-                        "enchantment": "minecraft:silk_touch",
+                        "enchantments": "minecraft:silk_touch",
                         "levels": {
                           "min": 1
                         }
@@ -126,11 +126,11 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "mstv-base:cherry_stick"
+          "name": "mstv-base:acacia_stick"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/cherry_leaves"
+  "random_sequence": "minecraft:blocks/acacia_leaves"
 }
