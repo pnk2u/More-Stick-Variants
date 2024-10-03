@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "mstv-base:spruce_stick",
+    "mstv-base:birch_stick",
+    "mstv-base:jungle_stick",
+    "mstv-base:acacia_stick",
+    "mstv-base:dark_oak_stick",
+    "mstv-base:mangrove_stick",
+    "mstv-base:cherry_stick"
+  ]
+}
