@@ -1,6 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:not" ,
+      "value": {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "mstv-masv"
+        ]
+      }
+    }
+  ],
+  "category": "equipment",
   "key": {
     "/": {
       "tag": "mstv-base:sticks"

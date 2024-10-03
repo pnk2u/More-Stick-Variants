@@ -19,9 +19,6 @@
   "entrypoints": {
     "main": [
       "de.pnku.mstv_base.MoreStickVariants"
-    ],
-    "fabric-datagen": [
-      "de.pnku.mstv_base.MoreStickVariantDatagen"
     ]
   },
   "depends": {
