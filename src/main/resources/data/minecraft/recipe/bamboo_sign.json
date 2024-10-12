@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "item": "minecraft:bamboo_planks"
-    },
-    "X": {
-      "item": "minecraft:bamboo"
-    }
+    "#": "minecraft:bamboo_planks",
+    "X": "minecraft:bamboo"
   },
   "pattern": [
     "###",

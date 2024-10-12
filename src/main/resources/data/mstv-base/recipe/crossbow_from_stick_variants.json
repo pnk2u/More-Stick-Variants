@@ -3,18 +3,10 @@
   "category": "equipment",
   "group": "crossbow",
   "key": {
-    "#": {
-      "tag": "mstv-base:stick_variants"
-    },
-    "$": {
-      "item": "minecraft:tripwire_hook"
-    },
-    "&": {
-      "tag": "c:ingots/iron"
-    },
-    "~": {
-      "item": "minecraft:string"
-    }
+    "#": "#mstv-base:stick_variants",
+    "$": "minecraft:tripwire_hook",
+    "&": "#c:ingots/iron",
+    "~": "minecraft:string"
   },
   "pattern": [
     "#&#",

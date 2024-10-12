@@ -13,15 +13,9 @@
   ],
   "category": "equipment",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "item": "minecraft:flint"
-    },
-    "Y": {
-      "item": "minecraft:feather"
-    }
+    "#": "#mstv-base:sticks",
+    "X": "minecraft:flint",
+    "Y": "minecraft:feather"
   },
   "pattern": [
     "X",

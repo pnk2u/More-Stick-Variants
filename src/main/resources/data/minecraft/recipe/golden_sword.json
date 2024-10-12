@@ -13,12 +13,8 @@
   ],
   "category": "equipment",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "item": "minecraft:gold_ingot"
-    }
+    "#": "#mstv-base:sticks",
+    "X": "minecraft:gold_ingot"
   },
   "pattern": [
     "X",

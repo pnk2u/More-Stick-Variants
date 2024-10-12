@@ -13,12 +13,8 @@
   ],
   "category": "equipment",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "tag": "minecraft:stone_tool_materials"
-    }
+    "#": "#mstv-base:sticks",
+    "X": "#minecraft:stone_tool_materials"
   },
   "pattern": [
     "XX",

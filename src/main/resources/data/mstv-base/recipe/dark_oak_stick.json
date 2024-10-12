@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "sticks",
   "key": {
-    "W": {
-      "item": "minecraft:dark_oak_planks"
-    }
+    "W": "minecraft:dark_oak_planks"
   },
   "pattern": [
     "W",

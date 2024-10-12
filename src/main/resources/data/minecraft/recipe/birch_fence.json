@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_fence",
   "key": {
-    "#": {
-      "item": "mstv-base:birch_stick"
-    },
-    "W": {
-      "item": "minecraft:birch_planks"
-    }
+    "#": "mstv-base:birch_stick",
+    "W": "minecraft:birch_planks"
   },
   "pattern": [
     "W#W",

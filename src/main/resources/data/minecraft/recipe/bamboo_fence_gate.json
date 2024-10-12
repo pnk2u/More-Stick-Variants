@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "wooden_fence_gate",
   "key": {
-    "#": {
-      "item": "minecraft:bamboo"
-    },
-    "W": {
-      "item": "minecraft:bamboo_planks"
-    }
+    "#": "minecraft:bamboo",
+    "W": "minecraft:bamboo_planks"
   },
   "pattern": [
     "#W#",

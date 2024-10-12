@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "item": "minecraft:cherry_planks"
-    },
-    "X": {
-      "item": "mstv-base:cherry_stick"
-    }
+    "#": "minecraft:cherry_planks",
+    "X": "mstv-base:cherry_stick"
   },
   "pattern": [
     "###",

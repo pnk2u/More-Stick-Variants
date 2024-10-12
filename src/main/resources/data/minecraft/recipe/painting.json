@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "tag": "minecraft:wool"
-    }
+    "#": "#mstv-base:sticks",
+    "X": "#minecraft:wool"
   },
   "pattern": [
     "###",

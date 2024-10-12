@@ -13,9 +13,7 @@
   ],
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    }
+    "#": "#mstv-base:sticks"
   },
   "pattern": [
     "# #",

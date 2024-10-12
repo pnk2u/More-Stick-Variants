@@ -13,12 +13,8 @@
   ],
   "category": "equipment",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "#": "#mstv-base:sticks",
+    "X": "minecraft:diamond"
   },
   "pattern": [
     "X",

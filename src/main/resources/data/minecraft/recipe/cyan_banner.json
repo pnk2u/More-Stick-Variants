@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "banner",
   "key": {
-    "#": {
-      "item": "minecraft:cyan_wool"
-    },
-    "|": {
-      "tag": "mstv-base:sticks"
-    }
+    "#": "minecraft:cyan_wool",
+    "|": "#mstv-base:sticks"
   },
   "pattern": [
     "###",

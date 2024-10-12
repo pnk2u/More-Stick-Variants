@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "banner",
   "key": {
-    "#": {
-      "item": "minecraft:green_wool"
-    },
-    "|": {
-      "tag": "mstv-base:sticks"
-    }
+    "#": "minecraft:green_wool",
+    "|": "#mstv-base:sticks"
   },
   "pattern": [
     "###",

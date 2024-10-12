@@ -13,19 +13,11 @@
   ],
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "S": {
-      "tag": "minecraft:soul_fire_base_blocks"
-    },
+    "#": "#mstv-base:sticks",
+    "S": "#minecraft:soul_fire_base_blocks",
     "X": [
-      {
-        "item": "minecraft:coal"
-      },
-      {
-        "item": "minecraft:charcoal"
-      }
+      "minecraft:coal",
+      "minecraft:charcoal"
     ]
   },
   "pattern": [

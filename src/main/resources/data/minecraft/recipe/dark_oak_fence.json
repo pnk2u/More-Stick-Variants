@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_fence",
   "key": {
-    "#": {
-      "item": "mstv-base:dark_oak_stick"
-    },
-    "W": {
-      "item": "minecraft:dark_oak_planks"
-    }
+    "#": "mstv-base:dark_oak_stick",
+    "W": "minecraft:dark_oak_planks"
   },
   "pattern": [
     "W#W",

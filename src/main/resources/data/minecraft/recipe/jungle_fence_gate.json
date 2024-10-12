@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "wooden_fence_gate",
   "key": {
-    "#": {
-      "item": "mstv-base:jungle_stick"
-    },
-    "W": {
-      "item": "minecraft:jungle_planks"
-    }
+    "#": "mstv-base:jungle_stick",
+    "W": "minecraft:jungle_planks"
   },
   "pattern": [
     "#W#",

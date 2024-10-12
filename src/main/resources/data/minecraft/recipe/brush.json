@@ -14,15 +14,9 @@
   "category": "equipment",
   "group": "brush",
   "key": {
-    "#": {
-      "item": "minecraft:copper_ingot"
-    },
-    "I": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "item": "minecraft:feather"
-    }
+    "#": "minecraft:copper_ingot",
+    "I": "#mstv-base:sticks",
+    "X": "minecraft:feather"
   },
   "pattern": [
     "X",

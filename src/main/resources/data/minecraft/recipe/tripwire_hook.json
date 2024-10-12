@@ -3,15 +3,9 @@
   "group": "tripwire_hook",
   "category": "redstone",
   "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "S": {
-      "tag": "mstv-base:sticks"
-    }
+    "#": "#minecraft:planks",
+    "I": "minecraft:iron_ingot",
+    "S": "#mstv-base:sticks"
   },
   "pattern": [
     "I",

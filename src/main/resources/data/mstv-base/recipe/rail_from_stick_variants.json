@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "rail",
   "key": {
-    "#": {
-      "tag": "mstv-base:stick_variants"
-    },
-    "X": {
-      "tag": "c:ingots/iron"
-    }
+    "#": "#mstv-base:stick_variants",
+    "X": "#c:ingots/iron"
   },
   "pattern": [
     "X X",
