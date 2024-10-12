@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": {
-      "item": "minecraft:cobblestone"
-    },
-    "X": {
-      "tag": "mstv-base:sticks"
-    }
+    "#": "minecraft:cobblestone",
+    "X": "#mstv-base:sticks"
   },
   "pattern": [
     "X",

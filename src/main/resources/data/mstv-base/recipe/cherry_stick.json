@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "sticks",
   "key": {
-    "W": {
-      "item": "minecraft:cherry_planks"
-    }
+    "W": "minecraft:cherry_planks"
   },
   "pattern": [
     "W",

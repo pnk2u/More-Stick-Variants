@@ -13,12 +13,8 @@
   ],
   "category": "redstone",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "item": "minecraft:redstone"
-    }
+    "#": "#mstv-base:sticks",
+    "X": "minecraft:redstone"
   },
   "pattern": [
     "X",

@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "wooden_fence_gate",
   "key": {
-    "#": {
-      "item": "mstv-base:acacia_stick"
-    },
-    "W": {
-      "item": "minecraft:acacia_planks"
-    }
+    "#": "mstv-base:acacia_stick",
+    "W": "minecraft:acacia_planks"
   },
   "pattern": [
     "#W#",

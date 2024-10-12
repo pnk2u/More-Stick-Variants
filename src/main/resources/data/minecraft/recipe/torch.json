@@ -13,16 +13,10 @@
   ],
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
+    "#": "#mstv-base:sticks",
     "X": [
-      {
-        "item": "minecraft:coal"
-      },
-      {
-        "item": "minecraft:charcoal"
-      }
+      "minecraft:coal",
+      "minecraft:charcoal"
     ]
   },
   "pattern": [

@@ -13,15 +13,9 @@
   ],
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "minecraft:soul_fire_base_blocks"
-    },
-    "L": {
-      "tag": "minecraft:logs"
-    },
-    "S": {
-      "tag": "mstv-base:sticks"
-    }
+    "#": "#minecraft:soul_fire_base_blocks",
+    "L": "#minecraft:logs",
+    "S": "#mstv-base:sticks"
   },
   "pattern": [
     " S ",

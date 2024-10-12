@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "item": "minecraft:mangrove_planks"
-    },
-    "X": {
-      "item": "mstv-base:mangrove_stick"
-    }
+    "#": "minecraft:mangrove_planks",
+    "X": "mstv-base:mangrove_stick"
   },
   "pattern": [
     "###",

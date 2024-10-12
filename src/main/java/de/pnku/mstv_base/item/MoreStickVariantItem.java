@@ -1,5 +1,8 @@
 package de.pnku.mstv_base.item;
 
+import de.pnku.mstv_base.MoreStickVariants;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 
 
@@ -8,7 +11,7 @@ public class MoreStickVariantItem extends Item {
 
 
     public MoreStickVariantItem(String mstvWoodType, Item.Properties properties) {
-        super(properties);
+        super(properties.setId(ResourceKey.create(Registries.ITEM, MoreStickVariants.asId(mstvWoodType + "_stick"))));
         this.mstvWoodType = mstvWoodType;
     }
 

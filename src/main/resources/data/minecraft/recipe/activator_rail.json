@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "activator_rail",
   "key": {
-    "#": {
-      "item": "minecraft:redstone_torch"
-    },
-    "S": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "minecraft:redstone_torch",
+    "S": "#mstv-base:sticks",
+    "X": "minecraft:iron_ingot"
   },
   "pattern": [
     "XSX",

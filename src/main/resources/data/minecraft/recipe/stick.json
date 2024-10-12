@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "sticks",
   "ingredients": [
-    {
-      "tag": "mstv-base:stick_variants"
-    }
+    "#mstv-base:stick_variants"
   ],
   "result": {
     "count": 1,

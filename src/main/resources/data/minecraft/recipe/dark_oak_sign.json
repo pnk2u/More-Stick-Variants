@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "item": "minecraft:dark_oak_planks"
-    },
-    "X": {
-      "item": "mstv-base:dark_oak_stick"
-    }
+    "#": "minecraft:dark_oak_planks",
+    "X": "mstv-base:dark_oak_stick"
   },
   "pattern": [
     "###",

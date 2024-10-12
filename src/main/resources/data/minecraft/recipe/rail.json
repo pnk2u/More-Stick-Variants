@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "rail",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "#mstv-base:sticks",
+    "X": "minecraft:iron_ingot"
   },
   "pattern": [
     "X X",

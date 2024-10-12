@@ -13,12 +13,8 @@
   ],
   "category": "equipment",
   "key": {
-    "/": {
-      "tag": "mstv-base:sticks"
-    },
-    "_": {
-      "item": "minecraft:smooth_stone_slab"
-    }
+    "/": "#mstv-base:sticks",
+    "_": "minecraft:smooth_stone_slab"
   },
   "pattern": [
     "///",

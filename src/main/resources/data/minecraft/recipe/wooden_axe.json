@@ -13,12 +13,8 @@
   ],
   "category": "equipment",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "X": {
-      "tag": "minecraft:planks"
-    }
+    "#": "#mstv-base:sticks",
+    "X": "#minecraft:planks"
   },
   "pattern": [
     "XX",

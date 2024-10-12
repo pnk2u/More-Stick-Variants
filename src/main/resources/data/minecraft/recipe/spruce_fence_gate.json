@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "wooden_fence_gate",
   "key": {
-    "#": {
-      "item": "mstv-base:spruce_stick"
-    },
-    "W": {
-      "item": "minecraft:spruce_planks"
-    }
+    "#": "mstv-base:spruce_stick",
+    "W": "minecraft:spruce_planks"
   },
   "pattern": [
     "#W#",

@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "powered_rail",
   "key": {
-    "#": {
-      "tag": "mstv-base:sticks"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "X": {
-      "item": "minecraft:gold_ingot"
-    }
+    "#": "#mstv-base:sticks",
+    "R": "minecraft:redstone",
+    "X": "minecraft:gold_ingot"
   },
   "pattern": [
     "X X",

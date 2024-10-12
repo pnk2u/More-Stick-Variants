@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": {
-      "item": "minecraft:spruce_planks"
-    },
-    "X": {
-      "item": "mstv-base:spruce_stick"
-    }
+    "#": "minecraft:spruce_planks",
+    "X": "mstv-base:spruce_stick"
   },
   "pattern": [
     "###",
