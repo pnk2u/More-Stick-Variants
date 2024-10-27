@@ -11,15 +11,9 @@
   "category": "building",
   "group": "sandstone_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:sandstone_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:jungle_planks"
-    },
-    "|": {
-      "item": "mstv-base:jungle_stick"
-    }
+    "-": "#lolmgv:sandstone_grindstone_ingredients",
+    "P": "minecraft:jungle_planks",
+    "|": "mstv-base:jungle_stick"
   },
   "pattern": [
     "|-|",

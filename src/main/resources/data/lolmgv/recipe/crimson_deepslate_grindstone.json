@@ -11,15 +11,9 @@
   "category": "building",
   "group": "deepslate_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:deepslate_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:crimson_planks"
-    },
-    "|": {
-      "item": "mstv-base:crimson_stick"
-    }
+    "-": "#lolmgv:deepslate_grindstone_ingredients",
+    "P": "minecraft:crimson_planks",
+    "|": "mstv-base:crimson_stick"
   },
   "pattern": [
     "|-|",

@@ -11,15 +11,9 @@
   "category": "building",
   "group": "sandstone_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:sandstone_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:oak_planks"
-    },
-    "|": {
-      "item": "minecraft:stick"
-    }
+    "-": "#lolmgv:sandstone_grindstone_ingredients",
+    "P": "minecraft:oak_planks",
+    "|": "minecraft:stick"
   },
   "pattern": [
     "|-|",

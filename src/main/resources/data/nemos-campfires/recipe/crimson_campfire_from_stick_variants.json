@@ -11,15 +11,9 @@
   ],
   "group": "campfires",
   "key": {
-    "C": {
-      "tag": "minecraft:coals"
-    },
-    "L": {
-      "tag": "minecraft:crimson_stems"
-    },
-    "S": {
-      "tag": "mstv-base:stick_variants"
-    }
+    "C": "#minecraft:coals",
+    "L": "#minecraft:crimson_stems",
+    "S": "#mstv-base:stick_variants"
   },
   "pattern": [
     " S ",

@@ -11,15 +11,9 @@
   "category": "building",
   "group": "granite_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:granite_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:birch_planks"
-    },
-    "|": {
-      "item": "mstv-base:birch_stick"
-    }
+    "-": "#lolmgv:granite_grindstone_ingredients",
+    "P": "minecraft:birch_planks",
+    "|": "mstv-base:birch_stick"
   },
   "pattern": [
     "|-|",

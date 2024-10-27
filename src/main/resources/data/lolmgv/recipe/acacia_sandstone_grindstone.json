@@ -11,15 +11,9 @@
   "category": "building",
   "group": "sandstone_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:sandstone_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:acacia_planks"
-    },
-    "|": {
-      "item": "mstv-base:acacia_stick"
-    }
+    "-": "#lolmgv:sandstone_grindstone_ingredients",
+    "P": "minecraft:acacia_planks",
+    "|": "mstv-base:acacia_stick"
   },
   "pattern": [
     "|-|",

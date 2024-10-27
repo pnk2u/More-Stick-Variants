@@ -11,15 +11,9 @@
   "category": "building",
   "group": "deepslate_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:deepslate_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:bamboo_planks"
-    },
-    "|": {
-      "item": "minecraft:bamboo"
-    }
+    "-": "#lolmgv:deepslate_grindstone_ingredients",
+    "P": "minecraft:bamboo_planks",
+    "|": "minecraft:bamboo"
   },
   "pattern": [
     "|-|",

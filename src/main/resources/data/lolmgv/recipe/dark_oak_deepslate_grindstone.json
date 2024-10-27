@@ -11,15 +11,9 @@
   "category": "building",
   "group": "deepslate_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:deepslate_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:dark_oak_planks"
-    },
-    "|": {
-      "item": "mstv-base:dark_oak_stick"
-    }
+    "-": "#lolmgv:deepslate_grindstone_ingredients",
+    "P": "minecraft:dark_oak_planks",
+    "|": "mstv-base:dark_oak_stick"
   },
   "pattern": [
     "|-|",
