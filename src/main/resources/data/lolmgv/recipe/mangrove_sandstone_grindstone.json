@@ -11,15 +11,9 @@
   "category": "building",
   "group": "sandstone_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:sandstone_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:mangrove_planks"
-    },
-    "|": {
-      "item": "mstv-base:mangrove_stick"
-    }
+    "-": "#lolmgv:sandstone_grindstone_ingredients",
+    "P": "minecraft:mangrove_planks",
+    "|": "mstv-base:mangrove_stick"
   },
   "pattern": [
     "|-|",

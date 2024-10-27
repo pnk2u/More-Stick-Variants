@@ -11,15 +11,9 @@
   "category": "building",
   "group": "basalt_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:basalt_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:dark_oak_planks"
-    },
-    "|": {
-      "item": "mstv-base:dark_oak_stick"
-    }
+    "-": "#lolmgv:basalt_grindstone_ingredients",
+    "P": "minecraft:dark_oak_planks",
+    "|": "mstv-base:dark_oak_stick"
   },
   "pattern": [
     "|-|",

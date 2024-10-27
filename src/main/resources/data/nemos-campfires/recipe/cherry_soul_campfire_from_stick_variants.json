@@ -11,15 +11,9 @@
   ],
   "group": "soul_campfires",
   "key": {
-    "#": {
-      "tag": "minecraft:soul_fire_base_blocks"
-    },
-    "L": {
-      "tag": "minecraft:cherry_logs"
-    },
-    "S": {
-      "tag": "mstv-base:stick_variants"
-    }
+    "#": "#minecraft:soul_fire_base_blocks",
+    "L": "#minecraft:cherry_logs",
+    "S": "#mstv-base:stick_variants"
   },
   "pattern": [
     " S ",

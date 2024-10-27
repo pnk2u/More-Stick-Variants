@@ -11,15 +11,9 @@
   "category": "building",
   "group": "stone_grindstones",
   "key": {
-    "-": {
-      "item": "minecraft:stone_slab"
-    },
-    "P": {
-      "item": "minecraft:crimson_planks"
-    },
-    "|": {
-      "item": "mstv-base:crimson_stick"
-    }
+    "-": "minecraft:stone_slab",
+    "P": "minecraft:crimson_planks",
+    "|": "mstv-base:crimson_stick"
   },
   "pattern": [
     "|-|",

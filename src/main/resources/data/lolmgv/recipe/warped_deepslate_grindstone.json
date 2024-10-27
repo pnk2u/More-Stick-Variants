@@ -11,15 +11,9 @@
   "category": "building",
   "group": "deepslate_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:deepslate_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:warped_planks"
-    },
-    "|": {
-      "item": "mstv-base:warped_stick"
-    }
+    "-": "#lolmgv:deepslate_grindstone_ingredients",
+    "P": "minecraft:warped_planks",
+    "|": "mstv-base:warped_stick"
   },
   "pattern": [
     "|-|",

@@ -11,15 +11,9 @@
   "category": "building",
   "group": "deepslate_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:deepslate_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:cherry_planks"
-    },
-    "|": {
-      "item": "mstv-base:cherry_stick"
-    }
+    "-": "#lolmgv:deepslate_grindstone_ingredients",
+    "P": "minecraft:cherry_planks",
+    "|": "mstv-base:cherry_stick"
   },
   "pattern": [
     "|-|",

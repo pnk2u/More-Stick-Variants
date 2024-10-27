@@ -11,15 +11,9 @@
   "category": "building",
   "group": "granite_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:granite_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:warped_planks"
-    },
-    "|": {
-      "item": "mstv-base:warped_stick"
-    }
+    "-": "#lolmgv:granite_grindstone_ingredients",
+    "P": "minecraft:warped_planks",
+    "|": "mstv-base:warped_stick"
   },
   "pattern": [
     "|-|",

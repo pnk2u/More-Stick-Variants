@@ -11,15 +11,9 @@
   "category": "building",
   "group": "basalt_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:basalt_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:spruce_planks"
-    },
-    "|": {
-      "item": "mstv-base:spruce_stick"
-    }
+    "-": "#lolmgv:basalt_grindstone_ingredients",
+    "P": "minecraft:spruce_planks",
+    "|": "mstv-base:spruce_stick"
   },
   "pattern": [
     "|-|",

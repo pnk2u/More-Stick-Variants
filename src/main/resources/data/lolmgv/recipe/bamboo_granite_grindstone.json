@@ -11,15 +11,9 @@
   "category": "building",
   "group": "granite_grindstones",
   "key": {
-    "-": {
-      "tag": "lolmgv:granite_grindstone_ingredients"
-    },
-    "P": {
-      "item": "minecraft:bamboo_planks"
-    },
-    "|": {
-      "item": "minecraft:bamboo"
-    }
+    "-": "#lolmgv:granite_grindstone_ingredients",
+    "P": "minecraft:bamboo_planks",
+    "|": "minecraft:bamboo"
   },
   "pattern": [
     "|-|",
