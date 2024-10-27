@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "mstv-base:sticks"
+            "items": "#mstv-base:sticks"
           }
         ]
       },
