@@ -35,6 +35,9 @@ public class MoreStickVariantItem extends Item {
             case "dark_oak" -> {
                 return Items.DARK_OAK_PLANKS;
             }
+            case "pale_oak" -> {
+                return Items.PALE_OAK_PLANKS;
+            }
             case "jungle" -> {
                 return Items.JUNGLE_PLANKS;
             }
@@ -74,6 +77,9 @@ public class MoreStickVariantItem extends Item {
             }
             case "dark_oak" -> {
                 return MoreStickVariantItems.DARK_OAK_STICK;
+            }
+            case "pale_oak" -> {
+                return MoreStickVariantItems.PALE_OAK_STICK;
             }
             case "jungle" -> {
                 return MoreStickVariantItems.JUNGLE_STICK;
