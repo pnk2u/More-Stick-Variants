@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:features_enabled",
+      "features": [
+        "winter_drop"
+      ]
+    }
+  ],
+  "category": "misc",
+  "group": "sticks",
+  "key": {
+    "W": "minecraft:pale_oak_planks"
+  },
+  "pattern": [
+    "W",
+    "W"
+  ],
+  "result": {
+    "count": 4,
+    "id": "mstv-base:pale_oak_stick"
+  }
+}
