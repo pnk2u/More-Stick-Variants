@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "mstv-base:item/pale_oak_stick"
+    }
+}
