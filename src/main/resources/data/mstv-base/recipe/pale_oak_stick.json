@@ -1,13 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "fabric:load_conditions": [
-    {
-      "condition": "fabric:features_enabled",
-      "features": [
-        "winter_drop"
-      ]
-    }
-  ],
   "category": "misc",
   "group": "sticks",
   "key": {
