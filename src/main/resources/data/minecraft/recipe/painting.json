@@ -1,6 +1,26 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:not" ,
+      "value": {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "mstv-mframev"
+        ]
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "mstv-mframev"
+      }
+    }
+  ],
   "key": {
     "#": {
       "tag": "mstv-base:sticks"
