@@ -20,11 +20,6 @@ public class MoreStickVariants implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		MoreStickVariantItems.registerStickItems();
-		ResourceManagerHelper.registerBuiltinResourcePack(
-				ResourceLocation.fromNamespaceAndPath(MOD_ID, "pale_oak_experimental"),
-				FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
-				ResourcePackActivationType.ALWAYS_ENABLED
-		);
 	}
 
 	public static ResourceLocation asId(String path) {
