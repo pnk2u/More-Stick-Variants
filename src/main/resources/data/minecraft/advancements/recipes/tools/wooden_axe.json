@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#mstv-base:sticks"
+            "tag": "mstv-base:sticks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ladder"
+        "recipe": "minecraft:wooden_axe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ladder"
+      "minecraft:wooden_axe"
     ]
   }
 }

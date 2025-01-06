@@ -1,11 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_coal": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:coals"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_stick": {
       "conditions": {
         "items": [
           {
-            "items": "#mstv-base:sticks"
+            "tag": "mstv-base:sticks"
           }
         ]
       },
@@ -13,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:wooden_sword"
+        "recipe": "minecraft:campfire"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stick"
+      "has_stick",
+      "has_coal"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:wooden_sword"
+      "minecraft:campfire"
     ]
   }
 }

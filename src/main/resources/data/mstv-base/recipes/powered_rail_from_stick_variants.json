@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "fabric:load_conditions": [
     {
       "condition": "fabric:not" ,
       "value": {
         "condition": "fabric:all_mods_loaded" ,
         "values": [
-          "mstv-mtoolv"
+          "quad-mstv-mrailv"
         ]
       }
     }
@@ -16,30 +17,29 @@
       "type": "neoforge:not",
       "value": {
         "type": "neoforge:mod_loaded",
-        "modid": "mstv-mtoolv"
+        "modid": "quad-mstv-mrailv"
       }
     }
   ],
-  "category": "equipment",
-  "group": "brush",
+  "group": "powered_rail",
   "key": {
     "#": {
-      "item": "minecraft:copper_ingot"
+      "tag": "mstv-base:stick_variants"
     },
-    "I": {
-      "tag": "mstv-base:sticks"
+    "R": {
+      "item": "minecraft:redstone"
     },
     "X": {
-      "item": "minecraft:feather"
+      "tag": "c:ingots/gold"
     }
   },
   "pattern": [
-    "X",
-    "#",
-    "I"
+    "X X",
+    "X#X",
+    "XRX"
   ],
   "result": {
-    "count": 1,
-    "id": "minecraft:brush"
+    "count": 6,
+    "item": "minecraft:powered_rail"
   }
 }

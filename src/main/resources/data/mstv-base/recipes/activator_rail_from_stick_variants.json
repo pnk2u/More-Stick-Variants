@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "activator_rail",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:not" ,
+      "value": {
+        "condition": "fabric:any_mods_loaded" ,
+        "values": [
+          "quad-mstv-mtv",
+          "quad-mstv-mrailv"
+        ]
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:or",
+        "values": [
+          {
+            "type": "neoforge:mod_loaded",
+            "modid": "quad-mstv-mtv"
+          },
+          {
+            "type": "neoforge:mod_loaded",
+            "modid": "quad-mstv-mrailv"
+          }
+        ]
+      }
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:redstone_torch"
+    },
+    "S": {
+      "tag": "mstv-base:stick_variants"
+    },
+    "X": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "pattern": [
+    "XSX",
+    "X#X",
+    "XSX"
+  ],
+  "result": {
+    "count": 6,
+    "item": "minecraft:activator_rail"
+  }
+}
