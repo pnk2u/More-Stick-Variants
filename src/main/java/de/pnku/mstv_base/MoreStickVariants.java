@@ -19,6 +19,13 @@ public class MoreStickVariants implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
+		{
+			ResourceManagerHelper.registerBuiltinResourcePack(
+					asId("mstv-leaves-loot-fix"),
+					FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
+					ResourcePackActivationType.ALWAYS_ENABLED
+			);
+		}
 		MoreStickVariantItems.registerStickItems();
 	}
 
