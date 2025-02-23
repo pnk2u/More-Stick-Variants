@@ -2,8 +2,6 @@ package de.pnku.mstv_base.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.*;
 import net.minecraft.core.Registry;
 import de.pnku.mstv_base.MoreStickVariants;
@@ -13,8 +11,6 @@ import java.util.List;
 
 
 public class MoreStickVariantItems {
-
-    // Sticks
     public static final Item ACACIA_STICK = new MoreStickVariantItem("acacia", new Item.Properties());
     public static final Item BIRCH_STICK = new MoreStickVariantItem("birch", new Item.Properties());
     public static final Item CHERRY_STICK = new MoreStickVariantItem("cherry", new Item.Properties());
@@ -41,10 +37,9 @@ public class MoreStickVariantItems {
 
     private static void registerStickItem(Item stickItem, Item stickAfter) {
         String stickName = ((MoreStickVariantItem) stickItem).mstvWoodType + "_stick";
-        Registry.register(BuiltInRegistries.ITEM, MoreStickVariants.asId(stickName), stickItem);
+        Registry.register(BuiltInRegistries.ITEM, MoreStickVariants.withModId(stickName), stickItem);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(entries -> entries.addAfter(stickAfter, stickItem));
         more_sticks.add(stickItem);
-        MoreStickVariants.LOGGER.info("Registered: " + stickName);
     }
     
 }
