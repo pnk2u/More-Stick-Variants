@@ -2,7 +2,6 @@ package de.pnku.mstv_base;
 
 import de.pnku.mstv_base.item.MoreStickVariantItems;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
@@ -12,25 +11,20 @@ import org.slf4j.LoggerFactory;
 
 
 public class MoreStickVariants implements ModInitializer {
-
 	public static final String MOD_ID = "mstv-base";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	
 	@Override
 	public void onInitialize() {
-		{
-			ResourceManagerHelper.registerBuiltinResourcePack(
-					asId("mstv-leaves-loot-fix"),
+		ResourceManagerHelper.registerBuiltinResourcePack(
+					withModId("mstv-leaves-loot-fix"),
 					FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
-					ResourcePackActivationType.ALWAYS_ENABLED
-			);
-		}
+					ResourcePackActivationType.ALWAYS_ENABLED);
 		MoreStickVariantItems.registerStickItems();
 	}
 
-	public static ResourceLocation asId(String path) {
+	public static ResourceLocation withModId(String path) {
 		return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
 	}
-
 }
