@@ -11,7 +11,7 @@ public class MoreStickVariantItem extends Item {
 
 
     public MoreStickVariantItem(String mstvWoodType, Item.Properties properties) {
-        super(properties.setId(ResourceKey.create(Registries.ITEM, MoreStickVariants.asId(mstvWoodType + "_stick"))));
+        super(properties.setId(ResourceKey.create(Registries.ITEM, MoreStickVariants.withModId(mstvWoodType + "_stick"))));
         this.mstvWoodType = mstvWoodType;
     }
 
