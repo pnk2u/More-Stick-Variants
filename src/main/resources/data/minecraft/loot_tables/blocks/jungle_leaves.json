@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -16,7 +16,9 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                       "items": [ "minecraft:shears" ]
+                        "items": [
+                          "minecraft:shears"
+                        ]
                       }
                     },
                     {
@@ -25,13 +27,13 @@
                         "enchantments": [
                           {
                             "enchantment": "minecraft:silk_touch",
-                              "levels": {
+                            "levels": {
                               "min": 1
-                                }
-                              }
-                            ]
+                            }
                           }
-                        }
+                        ]
+                      }
+                    }
                   ]
                 }
               ],
@@ -60,10 +62,10 @@
           ]
         }
       ],
-      "rolls": 1.0
+      "rolls": 1
     },
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0,
       "conditions": [
         {
           "condition": "minecraft:inverted",
@@ -73,7 +75,9 @@
               {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                 "items": [ "minecraft:shears" ]
+                  "items": [
+                    "minecraft:shears"
+                  ]
                 }
               },
               {
@@ -82,13 +86,13 @@
                   "enchantments": [
                     {
                       "enchantment": "minecraft:silk_touch",
-                        "levels": {
+                      "levels": {
                         "min": 1
-                          }
-                        }
-                      ]
+                      }
                     }
-                  }
+                  ]
+                }
+              }
             ]
           }
         }
@@ -114,8 +118,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 2.0,
-                "min": 1.0
+                "max": 2,
+                "min": 1
               },
               "function": "minecraft:set_count"
             },
@@ -126,7 +130,7 @@
           "name": "mstv-base:jungle_stick"
         }
       ],
-      "rolls": 1.0
+      "rolls": 1
     }
   ],
   "random_sequence": "minecraft:blocks/jungle_leaves"
