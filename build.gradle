@@ -47,18 +47,6 @@ processResources {
 	}
 }
 
-//json Minifier
-
-tasks.named("processResources").configure {
-	doLast {
-		fileTree(dir: layout.buildDirectory.file("resources/main"), include: ["**/*.json", "**/*.jem"],).each { file ->
-			def content = file.text
-			content = content.replaceAll("\\s(?=[\\s\":\\[\\]{}])", "")
-			file.text = content
-		}
-	}
-}
-
 tasks.withType(JavaCompile).configureEach {
 	it.options.release = 17
 }
