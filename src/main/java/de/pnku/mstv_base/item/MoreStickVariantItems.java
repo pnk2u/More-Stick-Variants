@@ -23,6 +23,7 @@ public class MoreStickVariantItems {
     public static final Item WARPED_STICK = new MoreStickVariantItem("warped", new Item.Properties().fireResistant());
 
     public static final List<Item> more_sticks = new ArrayList<>();
+    public static final List<Item> all_sticks = new ArrayList<>();
 
     public static void registerStickItems() {
         registerStickItem(ACACIA_STICK, Items.STICK);
@@ -35,6 +36,8 @@ public class MoreStickVariantItems {
         registerStickItem(MANGROVE_STICK, JUNGLE_STICK);
         registerStickItem(SPRUCE_STICK, MANGROVE_STICK);
         registerStickItem(WARPED_STICK, SPRUCE_STICK);
+        all_sticks.addAll(more_sticks);
+        all_sticks.add(Items.STICK);
     }
 
     private static void registerStickItem(Item stickItem, Item stickAfter) {
