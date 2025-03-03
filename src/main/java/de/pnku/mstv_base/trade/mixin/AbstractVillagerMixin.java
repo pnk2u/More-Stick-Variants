@@ -1,0 +1,138 @@
+package de.pnku.mstv_base.trade.mixin;
+
+import com.llamalad7.mixinextras.sugar.Local;
+import com.llamalad7.mixinextras.sugar.ref.LocalIntRef;
+import net.minecraft.core.GlobalPos;
+import net.minecraft.world.entity.ai.memory.MemoryModuleType;
+import net.minecraft.world.entity.npc.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraft.world.item.trading.MerchantOffers;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import org.slf4j.Logger;
+import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import static de.pnku.mstv_base.item.MoreStickVariantItems.*;
+import static de.pnku.mstv_base.trade.MstvVillagerTrades.*;
+
+@Debug(export = true)
+@Mixin(AbstractVillager.class)
+public abstract class AbstractVillagerMixin {
+
+    @Shadow @Final private static Logger LOGGER;
+    @Unique
+    boolean hasLocalFletchingTable = false;
+    @Unique
+    boolean hasForeignStickTrade = false;
+    @Unique
+    boolean hasNonStickTrade = false;
+    @Unique
+    Block myFletchingTable = Blocks.AIR;
+    @Unique
+    Item localStick = Items.AIR;
+    @Unique
+    List<Item> initializedTrades = new ArrayList<>();
+
+
+    @Unique
+    AbstractVillager abstractVillager = (AbstractVillager) (Object) this;
+
+    @Redirect(method = "addOffersFromItemListings", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/trading/MerchantOffers;add(Ljava/lang/Object;)Z"))
+    protected boolean redirectedAddOffersFromItemListings(MerchantOffers givenOffers, Object object, @Local(ordinal = 1) LocalIntRef counter) {
+        if (abstractVillager instanceof Villager villager && object instanceof MerchantOffer addedOffer) {
+            VillagerData vData = villager.getVillagerData();
+            ItemStack playerOffer = addedOffer.getBaseCostA();
+            ItemStack villagerOffer = addedOffer.getResult();
+            if (affectedVillagers.contains(vData.getProfession())) {
+                if (!vData.getType().equals(VillagerType.PLAINS) || (!vData.getType().equals(VillagerType.SWAMP) && villagerOffer.getItem().equals(Items.CROSSBOW))) {
+                    if (replacedTrades.contains(villagerOffer.getItem()) || (this.initializedTrades.contains(villagerOffer.getItem()) && !villagerOffer.getItem().equals(Items.EMERALD))) {
+                        counter.set(counter.get() - 1);
+                        return false;
+                    }
+                    if (counter.get() >= 1) {
+                        this.initializedTrades.clear();
+                    }
+                }
+            }
+            if (vData.getProfession() == VillagerProfession.FLETCHER && vData.getLevel() == 1) {
+                if (this.hasForeignStickTrade && this.hasNonStickTrade) {
+                    this.hasForeignStickTrade = false;
+                    this.hasNonStickTrade = false;
+                    counter.set(2);
+                    return true;
+                } else {
+                    Optional<GlobalPos> jobSite = ((Villager) abstractVillager).getBrain().getMemory(MemoryModuleType.JOB_SITE);
+                    if (jobSite.isPresent() && this.myFletchingTable.equals(Blocks.AIR)) {
+                        this.myFletchingTable = abstractVillager.level().getBlockState(jobSite.get().pos()).getBlock();
+                    }
+                    this.localStick = fletcherLocalSticksBuyOffers.get(vData.getType());
+                    if (vData.getType() != VillagerType.PLAINS) {
+                        if (playerOffer.getItem() == Items.STICK && playerOffer.getCount() == 32) {
+                            LOGGER.info("Removed Oak Stick (32-1) Trade from " + vData.getType() + " Villager.");
+                            counter.set(0);
+                            return false;
+                        }
+                    }
+                    if (all_sticks.contains((playerOffer.getItem())) && !(fletcherLocalSticksBuyOffers.get(vData.getType()).equals(playerOffer.getItem())) && !fletchingTableToStick.getOrDefault(this.myFletchingTable, BIRCH_STICK).equals(playerOffer.getItem()) && !this.hasForeignStickTrade) {
+                        this.hasForeignStickTrade = true;
+                        counter.set(0);
+                        return givenOffers.add((MerchantOffer) addedOffer);
+                    }
+                    if (!all_sticks.contains((playerOffer.getItem())) && !this.hasNonStickTrade) {
+                        this.hasNonStickTrade = true;
+                        counter.set(0);
+                        return givenOffers.add((MerchantOffer) addedOffer);
+                    }
+                    counter.set(0);
+                    return false;
+                }
+            }
+            this.initializedTrades.add(villagerOffer.getItem());
+        }
+        return givenOffers.add((MerchantOffer) object);
+    }
+
+
+    @Inject(method = "addOffersFromItemListings", at = @At("TAIL"))
+    protected void injectedAddOffersFromItemListingsAtTail(MerchantOffers givenMerchantOffers, VillagerTrades.ItemListing[] newTrades, int maxNumbers, CallbackInfo ci) {
+        if (abstractVillager instanceof Villager villager) {
+            VillagerData vData = villager.getVillagerData();
+            Item tableBasedStick;
+            if (vData.getProfession() == VillagerProfession.FLETCHER && vData.getLevel() == 1) {
+                MerchantOffer tableBasedOffer;
+                if (fletcherLocalFletchingTable.containsKey(vData.getType())) {
+                Block fletchingTable = this.myFletchingTable;
+                    tableBasedStick = fletchingTableToStick.getOrDefault(fletchingTable, Items.STICK);
+                    if (fletcherLocalFletchingTable.get(vData.getType()).equals(fletchingTable)) {
+                        this.hasLocalFletchingTable = true;
+                    }
+                } else {tableBasedStick = BIRCH_STICK;}
+                tableBasedOffer = new MerchantOffer(new ItemCost(tableBasedStick, 24), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
+                Item localStick = this.localStick == null ? Items.AIR : this.localStick;
+                MerchantOffer localBasedOffer = new MerchantOffer(new ItemCost(localStick, 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
+                if(givenMerchantOffers.stream().noneMatch(merchantOffer -> merchantOffer.getBaseCostA().getItem().equals(tableBasedOffer.getBaseCostA().getItem()))) {
+                    givenMerchantOffers.add((MerchantOffer) tableBasedOffer);
+                }
+                if (!this.hasLocalFletchingTable) {
+                    givenMerchantOffers.add((MerchantOffer) localBasedOffer);
+                } else {
+                    this.hasLocalFletchingTable = false;
+                }
+            }
+        }
+        this.myFletchingTable = Blocks.AIR;
+        this.localStick = Items.AIR;
+    }
+}
