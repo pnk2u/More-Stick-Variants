@@ -2,6 +2,7 @@ package de.pnku.mstv_base.trade.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.ref.LocalIntRef;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.npc.*;
@@ -56,14 +57,38 @@ public abstract class AbstractVillagerMixin {
             ItemStack playerOffer = addedOffer.getBaseCostA();
             ItemStack villagerOffer = addedOffer.getResult();
             if (affectedVillagers.contains(vData.getProfession())) {
-                if (!vData.getType().equals(VillagerType.PLAINS) || (!vData.getType().equals(VillagerType.SWAMP) && villagerOffer.getItem().equals(Items.CROSSBOW))) {
-                    if (replacedTrades.contains(villagerOffer.getItem()) || (this.initializedTrades.contains(villagerOffer.getItem()) && !villagerOffer.getItem().equals(Items.EMERALD))) {
-                        counter.set(counter.get() - 1);
-                        return false;
-                    }
-                    if (counter.get() >= 1) {
-                        this.initializedTrades.clear();
-                    }
+                boolean paintingSpecialCase = FabricLoader.getInstance().isModLoaded("mstv-mframev")
+                                            && vData.getProfession().equals(VillagerProfession.SHEPHERD)
+                                            && villagerOffer.getItem().equals(Items.PAINTING);
+
+                boolean crossbowSpecialCase = FabricLoader.getInstance().isModLoaded("mstv-mweaponv")
+                                            && vData.getType().equals(VillagerType.SWAMP)
+                                            && villagerOffer.getItem().equals(Items.CROSSBOW);
+
+                boolean shieldSpecialCase   = FabricLoader.getInstance().isModLoaded("lolmsv")
+                                            && (vData.getType().equals(VillagerType.TAIGA) || vData.getType().equals(VillagerType.SNOW))
+                                            && villagerOffer.getItem().equals(Items.SHIELD);
+
+                boolean defaultCase = !vData.getType().equals(VillagerType.PLAINS)
+                                    && !crossbowSpecialCase
+                                    && !shieldSpecialCase;
+
+                if (    (defaultCase
+                    || (!shieldSpecialCase && villagerOffer.getItem().equals(Items.SHIELD))
+                    || (!crossbowSpecialCase && villagerOffer.getItem().equals(Items.CROSSBOW))
+                    || (paintingSpecialCase))
+                && replacedTrades.contains(villagerOffer.getItem())) {
+                    counter.set(counter.get() - 1);
+                    return false;
+                }
+
+                if (this.initializedTrades.contains(villagerOffer.getItem()) && !villagerOffer.getItem().equals(Items.EMERALD)) {
+                    counter.set(counter.get() - 1);
+                    return false;
+                }
+
+                if (counter.get() >= 1) {
+                    this.initializedTrades.clear();
                 }
             }
             if (vData.getProfession() == VillagerProfession.FLETCHER && vData.getLevel() == 1) {
