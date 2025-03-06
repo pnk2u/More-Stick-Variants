@@ -21,6 +21,9 @@
       "de.pnku.mstv_base.MoreStickVariants"
     ]
   },
+  "mixins": [
+    "mstv-base.trade.mixins.json"
+  ],
   "depends": {
 		"fabricloader": ">=${loader_version}",
 		"minecraft": "~1.20.1",

@@ -1,6 +1,7 @@
 package de.pnku.mstv_base;
 
 import de.pnku.mstv_base.item.MoreStickVariantItems;
+import de.pnku.mstv_base.trade.MstvVillagerTrades;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
@@ -22,6 +23,8 @@ public class MoreStickVariants implements ModInitializer {
 					FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
 					ResourcePackActivationType.ALWAYS_ENABLED);
 		MoreStickVariantItems.registerStickItems();
+
+		MstvVillagerTrades.initMstvTradeRegistration();
 	}
 
 	public static ResourceLocation withModId(String path) {

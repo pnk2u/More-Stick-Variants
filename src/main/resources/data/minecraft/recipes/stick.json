@@ -4,7 +4,7 @@
   "group": "sticks",
   "ingredients": [
     {
-      "tag": "mstv-base:stick_variants"
+      "tag": "mstv-base:mstv_stick_variants"
     }
   ],
   "result": {
