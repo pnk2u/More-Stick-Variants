@@ -1,7 +1,6 @@
 package de.pnku.mstv_base.trade.mixin;
 
 import com.google.common.collect.Lists;
-import com.llamalad7.mixinextras.sugar.ref.LocalIntRef;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
@@ -42,8 +41,6 @@ public abstract class AbstractVillagerMixin {
     @Unique
     List<Item> initializedTrades = new ArrayList<>();
     @Unique
-    int counter;
-    @Unique
     private Item getDefaultStick(VillagerType type){
             return (!FabricLoader.getInstance().isModLoaded("lolmft") && !type.equals(VillagerType.PLAINS)) ? Items.STICK : BIRCH_STICK;
     }
@@ -62,14 +59,14 @@ public abstract class AbstractVillagerMixin {
                 int i = 0;
 
                 while (i < maxNumbers && !arrayList.isEmpty()) {
-                    MerchantOffer merchantOffer = ((VillagerTrades.ItemListing) arrayList.remove(abstractVillager.getRandom().nextInt(arrayList.size()))).getOffer(abstractVillager, abstractVillager.getRandom());
+                    MerchantOffer merchantOffer = (arrayList.remove(abstractVillager.getRandom().nextInt(arrayList.size()))).getOffer(abstractVillager, abstractVillager.getRandom());
                     if (merchantOffer != null) {
                         i = this.mstv$redirectedAddOffersFromItemListings(givenMerchantOffers, merchantOffer, i, villager, vData);
                         ++i;
                     }
                 }
 
-                this.mstv$injectedAddOffersFromItemListingsAtTail(givenMerchantOffers, newTrades, maxNumbers, (CallbackInfo) null);
+                this.mstv$injectedAddOffersFromItemListingsAtTail(givenMerchantOffers);
                 ci.cancel();
             }
         }
@@ -156,7 +153,7 @@ public abstract class AbstractVillagerMixin {
 
 
     @Unique
-    protected void mstv$injectedAddOffersFromItemListingsAtTail(MerchantOffers givenMerchantOffers, VillagerTrades.ItemListing[] newTrades, int maxNumbers, CallbackInfo ci) {
+    protected void mstv$injectedAddOffersFromItemListingsAtTail(MerchantOffers givenMerchantOffers) {
         if (abstractVillager instanceof Villager villager) {
             VillagerData vData = villager.getVillagerData();
             Item tableBasedStick;
