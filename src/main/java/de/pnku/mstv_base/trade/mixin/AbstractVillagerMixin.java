@@ -13,7 +13,6 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import org.slf4j.Logger;
 import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -45,8 +44,8 @@ public abstract class AbstractVillagerMixin {
     @Unique
     int counter;
     @Unique
-    private boolean isMFletchingTableVLoaded(){
-        return FabricLoader.getInstance().isModLoaded("lolmft");
+    private Item getDefaultStick(VillagerType type){
+            return (!FabricLoader.getInstance().isModLoaded("lolmft") && !type.equals(VillagerType.PLAINS)) ? Items.STICK : BIRCH_STICK;
     }
 
     @Unique
@@ -134,16 +133,16 @@ public abstract class AbstractVillagerMixin {
                         return counter;
                     }
                 }
-                if (all_sticks.contains((playerOffer.getItem())) && !(fletcherLocalSticksBuyOffers.get(vData.getType()).equals(playerOffer.getItem())) && !fletchingTableToStick.getOrDefault(this.myFletchingTable, this.isMFletchingTableVLoaded() ? BIRCH_STICK : Items.STICK).equals(playerOffer.getItem()) && !this.hasForeignStickTrade) {
+                if (all_sticks.contains((playerOffer.getItem())) && !(fletcherLocalSticksBuyOffers.get(vData.getType()).equals(playerOffer.getItem())) && !fletchingTableToStick.getOrDefault(this.myFletchingTable, this.getDefaultStick(vData.getType())).equals(playerOffer.getItem()) && !this.hasForeignStickTrade) {
                     this.hasForeignStickTrade = true;
                     counter = 0;
-                    givenOffers.add((MerchantOffer) addedOffer);
+                    givenOffers.add(addedOffer);
                     return counter;
                 }
                 if (!all_sticks.contains((playerOffer.getItem())) && !this.hasNonStickTrade) {
                     this.hasNonStickTrade = true;
                     counter = 0;
-                    givenOffers.add((MerchantOffer) addedOffer);
+                    givenOffers.add(addedOffer);
                     return counter;
                 }
                 counter = 0;
@@ -165,21 +164,21 @@ public abstract class AbstractVillagerMixin {
                 MerchantOffer tableBasedOffer;
                 if (fletcherLocalFletchingTable.containsKey(vData.getType())) {
                 Block fletchingTable = this.myFletchingTable;
-                    tableBasedStick = fletchingTableToStick.getOrDefault(fletchingTable, this.isMFletchingTableVLoaded() ? BIRCH_STICK : Items.STICK);
+                    tableBasedStick = fletchingTableToStick.getOrDefault(fletchingTable, this.getDefaultStick(vData.getType()));
                     if (fletcherLocalFletchingTable.get(vData.getType()).equals(fletchingTable)) {
                         this.hasLocalFletchingTable = true;
                     }
-                } else {tableBasedStick = this.isMFletchingTableVLoaded() ? BIRCH_STICK : Items.STICK;}
-                tableBasedOffer = new MerchantOffer(new ItemStack(tableBasedStick, this.isMFletchingTableVLoaded() ? 24 : 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
+                } else {tableBasedStick = this.getDefaultStick(vData.getType());}
+                tableBasedOffer = new MerchantOffer(new ItemStack(tableBasedStick, !this.getDefaultStick(vData.getType()).equals(Items.STICK) ? 24 : 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
                 Item localStick = this.localStick == null ? Items.AIR : this.localStick;
                 MerchantOffer localBasedOffer = new MerchantOffer(new ItemStack(localStick, 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
                 if(givenMerchantOffers.stream().noneMatch(merchantOffer -> merchantOffer.getBaseCostA().getItem().equals(tableBasedOffer.getBaseCostA().getItem()))) {
-                    givenMerchantOffers.add((MerchantOffer) tableBasedOffer);
+                    givenMerchantOffers.add(tableBasedOffer);
                 } else {
                     LOGGER.info("Fletching Table based Stick trade was already added as Foreign Stick Trade. This should not happen!");
                 }
                 if (!this.hasLocalFletchingTable) {
-                    givenMerchantOffers.add((MerchantOffer) localBasedOffer);
+                    givenMerchantOffers.add(localBasedOffer);
                 } else {
                     this.hasLocalFletchingTable = false;
                 }
