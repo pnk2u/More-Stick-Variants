@@ -2,6 +2,7 @@ package de.pnku.mstv_base.trade.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.ref.LocalIntRef;
+import de.pnku.mstv_base.MoreStickVariants;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
@@ -28,11 +29,9 @@ import java.util.Optional;
 import static de.pnku.mstv_base.item.MoreStickVariantItems.*;
 import static de.pnku.mstv_base.trade.MstvVillagerTrades.*;
 
-@Debug(export = true)
 @Mixin(AbstractVillager.class)
 public abstract class AbstractVillagerMixin {
 
-    @Shadow @Final private static Logger LOGGER;
     @Unique
     boolean hasLocalFletchingTable = false;
     @Unique
@@ -45,7 +44,10 @@ public abstract class AbstractVillagerMixin {
     Item localStick = Items.AIR;
     @Unique
     List<Item> initializedTrades = new ArrayList<>();
-
+    @Unique
+    private boolean isMFletchingTableVLoaded(){
+        return FabricLoader.getInstance().isModLoaded("lolmft");
+    }
 
     @Unique
     AbstractVillager abstractVillager = (AbstractVillager) (Object) this;
@@ -105,12 +107,11 @@ public abstract class AbstractVillagerMixin {
                     this.localStick = fletcherLocalSticksBuyOffers.get(vData.getType());
                     if (vData.getType() != VillagerType.PLAINS) {
                         if (playerOffer.getItem() == Items.STICK && playerOffer.getCount() == 32) {
-                            LOGGER.info("Removed Oak Stick (32-1) Trade from " + vData.getType() + " Villager.");
                             counter.set(0);
                             return false;
                         }
                     }
-                    if (all_sticks.contains((playerOffer.getItem())) && !(fletcherLocalSticksBuyOffers.get(vData.getType()).equals(playerOffer.getItem())) && !fletchingTableToStick.getOrDefault(this.myFletchingTable, BIRCH_STICK).equals(playerOffer.getItem()) && !this.hasForeignStickTrade) {
+                    if (all_sticks.contains((playerOffer.getItem())) && !(fletcherLocalSticksBuyOffers.get(vData.getType()).equals(playerOffer.getItem())) && !fletchingTableToStick.getOrDefault(this.myFletchingTable, this.isMFletchingTableVLoaded() ? BIRCH_STICK : Items.STICK).equals(playerOffer.getItem()) && !this.hasForeignStickTrade) {
                         this.hasForeignStickTrade = true;
                         counter.set(0);
                         return givenOffers.add((MerchantOffer) addedOffer);
@@ -139,16 +140,18 @@ public abstract class AbstractVillagerMixin {
                 MerchantOffer tableBasedOffer;
                 if (fletcherLocalFletchingTable.containsKey(vData.getType())) {
                 Block fletchingTable = this.myFletchingTable;
-                    tableBasedStick = fletchingTableToStick.getOrDefault(fletchingTable, Items.STICK);
+                    tableBasedStick = fletchingTableToStick.getOrDefault(fletchingTable, this.isMFletchingTableVLoaded() ? BIRCH_STICK : Items.STICK);
                     if (fletcherLocalFletchingTable.get(vData.getType()).equals(fletchingTable)) {
                         this.hasLocalFletchingTable = true;
                     }
-                } else {tableBasedStick = BIRCH_STICK;}
-                tableBasedOffer = new MerchantOffer(new ItemCost(tableBasedStick, 24), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
+                } else {tableBasedStick = this.isMFletchingTableVLoaded() ? BIRCH_STICK : Items.STICK;}
+                tableBasedOffer = new MerchantOffer(new ItemCost(tableBasedStick, this.isMFletchingTableVLoaded() ? 24 : 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
                 Item localStick = this.localStick == null ? Items.AIR : this.localStick;
                 MerchantOffer localBasedOffer = new MerchantOffer(new ItemCost(localStick, 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
                 if(givenMerchantOffers.stream().noneMatch(merchantOffer -> merchantOffer.getBaseCostA().getItem().equals(tableBasedOffer.getBaseCostA().getItem()))) {
                     givenMerchantOffers.add((MerchantOffer) tableBasedOffer);
+                } else {
+                    MoreStickVariants.LOGGER.info("Fletching Table based Stick trade was already added as Foreign Stick Trade. This should not happen!");
                 }
                 if (!this.hasLocalFletchingTable) {
                     givenMerchantOffers.add((MerchantOffer) localBasedOffer);
