@@ -104,7 +104,7 @@ public class MstvVillagerTrades {
             fletcherLocalFletchingTable.putAll(initTypeToMftMap());
             fletchingTableToStick.putAll(initMftToStickMap());
         } else {
-            fletchingTableToStick.put(Blocks.FLETCHING_TABLE, BIRCH_STICK);
+            fletchingTableToStick.put(Blocks.FLETCHING_TABLE, STICK);
         }
         replacedTrades.add(STICK);
         affectedVillagers.add(FLETCHER);
@@ -142,8 +142,6 @@ public class MstvVillagerTrades {
             registerBiomeSpecificSellOffers(WEAPONSMITH, 5, 8, 1, 30, 3, highMod, true, new Item[]{ACACIA_DIAMOND_SWORD, DIAMOND_SWORD, DARK_OAK_DIAMOND_SWORD, JUNGLE_DIAMOND_SWORD, SPRUCE_DIAMOND_SWORD});
 
             replacedTrades.addAll(List.of(IRON_SWORD, DIAMOND_SWORD));
-
-            affectedVillagers.add(WEAPONSMITH);
     }
 
     private static void registerMtoolvTrades(){
@@ -167,15 +165,11 @@ public class MstvVillagerTrades {
 
         replacedTrades.addAll(List.of(STONE_AXE, STONE_SHOVEL, STONE_PICKAXE, STONE_HOE, IRON_AXE, IRON_SHOVEL, IRON_PICKAXE, IRON_HOE, DIAMOND_HOE, DIAMOND_AXE, DIAMOND_SHOVEL, DIAMOND_PICKAXE));
 
-        affectedVillagers.add(TOOLSMITH);
-
       // Weaponsmith
         // Enchanted Iron Axe Sell
         registerBiomeSpecificSellOffers(WEAPONSMITH, 1, 3, 1, 1, 12, highMod, false, new Item[]{ACACIA_IRON_AXE, IRON_AXE, DARK_OAK_IRON_AXE, JUNGLE_IRON_AXE, SPRUCE_IRON_AXE});
         // Enchanted Diamond Axe Sell
         registerBiomeSpecificSellOffers(WEAPONSMITH, 4, 12, 1, 15, 3, highMod, true, new Item[]{ACACIA_DIAMOND_AXE, DIAMOND_AXE, DARK_OAK_DIAMOND_AXE, JUNGLE_DIAMOND_AXE, SPRUCE_DIAMOND_AXE});
-
-        affectedVillagers.add(WEAPONSMITH);
     }
 
     private static void registerMframevTrades(){
@@ -188,7 +182,7 @@ public class MstvVillagerTrades {
 
       // Shepherd
         // Painting Sell
-        registerBiomeSpecificSellOffers(SHEPHERD, 5, 2, 3, 30, 12, lowMod, false, new Item[]{ACACIA_PAINTING, PAINTING,  DARK_OAK_PAINTING, JUNGLE_PAINTING,  SPRUCE_PAINTING});
+        registerBiomeSpecificSellOffers(SHEPHERD, 5, 2, 3, 30, 12, lowMod, false, new Item[]{ACACIA_PAINTING, OAK_PAINTING,  DARK_OAK_PAINTING, JUNGLE_PAINTING,  SPRUCE_PAINTING});
 
         replacedTrades.add(PAINTING);
     }
@@ -246,7 +240,7 @@ public class MstvVillagerTrades {
     }
 
     private static void registerMbookshelfvTrades(){
-        registerBiomeSpecificSellOffers(LIBRARIAN, 1, 9, 1, 1, 12, lowMod, false, new Item[]{ACACIA_BOOKSHELF_I, BOOKSHELF, DARK_OAK_BOOKSHELF_I, JUNGLE_BOOKSHELF_I, SPRUCE_BOOKSHELF_I, SPRUCE_BOOKSHELF_I});
+        registerBiomeSpecificSellOffers(LIBRARIAN, 1, 9, 1, 1, 12, lowMod, false, new Item[]{ACACIA_BOOKSHELF_I, BOOKSHELF, DARK_OAK_BOOKSHELF_I, JUNGLE_BOOKSHELF_I, SPRUCE_BOOKSHELF_I});
 
         replacedTrades.add(BOOKSHELF);
     }
@@ -298,17 +292,19 @@ public class MstvVillagerTrades {
     }
 
     private static Map<Block, Item> initMftToStickMap(){
-        return Map.of(  ACACIA_FLETCHING_TABLE,     ACACIA_STICK,
-                        BAMBOO_FLETCHING_TABLE,     BAMBOO,
-                        CHERRY_FLETCHING_TABLE,     CHERRY_STICK,
-                        CRIMSON_FLETCHING_TABLE,    CRIMSON_STICK,
-                        DARK_OAK_FLETCHING_TABLE,   DARK_OAK_STICK,
-                        JUNGLE_FLETCHING_TABLE,     JUNGLE_STICK,
-                        MANGROVE_FLETCHING_TABLE,   MANGROVE_STICK,
-                        OAK_FLETCHING_TABLE,        STICK,
-                        SPRUCE_FLETCHING_TABLE,     SPRUCE_STICK,
-                        WARPED_FLETCHING_TABLE,     WARPED_STICK
-        );
+        Map<Block, Item> MftMap = new HashMap<>(Map.of(ACACIA_FLETCHING_TABLE, ACACIA_STICK,
+                BAMBOO_FLETCHING_TABLE, BAMBOO,
+                CHERRY_FLETCHING_TABLE, CHERRY_STICK,
+                CRIMSON_FLETCHING_TABLE, CRIMSON_STICK,
+                DARK_OAK_FLETCHING_TABLE, DARK_OAK_STICK,
+                JUNGLE_FLETCHING_TABLE, JUNGLE_STICK,
+                MANGROVE_FLETCHING_TABLE, MANGROVE_STICK,
+                OAK_FLETCHING_TABLE, STICK,
+                SPRUCE_FLETCHING_TABLE, SPRUCE_STICK,
+                WARPED_FLETCHING_TABLE, WARPED_STICK
+        ));
+        MftMap.put(Blocks.FLETCHING_TABLE, BIRCH_STICK);
+        return MftMap;
     }
 
     private static boolean isLoaded(String modId) {
