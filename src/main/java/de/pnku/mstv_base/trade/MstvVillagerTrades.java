@@ -2,18 +2,21 @@ package de.pnku.mstv_base.trade;
 
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.npc.VillagerDataHolder;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.VillagerType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static com.nemonotfound.nemoscampfires.item.ModItems.*;
 import static de.pnku.lolmsv.item.MoreShieldVariantItems.*;
@@ -125,11 +128,11 @@ public class MstvVillagerTrades {
             // Tipped Arrow Exchange
             TradeOfferHelper.registerVillagerOffers(FLETCHER, 5,  factories -> factories.addAll(
                     List.of(new VillagerTrades.ItemListing[]{
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(ACACIA_ARROW, 5, ACACIA_TIPPED_ARROW, 5, 2, 12, 30), SAVANNA),
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(ARROW, 5, TIPPED_ARROW, 5, 2, 12, 30), PLAINS),
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(DARK_OAK_ARROW, 5, DARK_OAK_TIPPED_ARROW, 5, 2, 12, 30), SWAMP),
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(JUNGLE_ARROW, 5, JUNGLE_TIPPED_ARROW, 5, 2, 12, 30), JUNGLE, DESERT),
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(SPRUCE_ARROW, 5, SPRUCE_TIPPED_ARROW, 5, 2, 12, 30), TAIGA, VillagerType.SNOW)
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(ACACIA_ARROW, 5, ACACIA_TIPPED_ARROW, 5, 2, 12, 30), SAVANNA),
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(ARROW, 5, TIPPED_ARROW, 5, 2, 12, 30), PLAINS),
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(DARK_OAK_ARROW, 5, DARK_OAK_TIPPED_ARROW, 5, 2, 12, 30), SWAMP),
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(JUNGLE_ARROW, 5, JUNGLE_TIPPED_ARROW, 5, 2, 12, 30), JUNGLE, DESERT),
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(new VillagerTrades.TippedArrowForItemsAndEmeralds(SPRUCE_ARROW, 5, SPRUCE_TIPPED_ARROW, 5, 2, 12, 30), TAIGA, VillagerType.SNOW)
                     })
             ));
 
@@ -250,11 +253,11 @@ public class MstvVillagerTrades {
         if (soldVariants.length == 5){
             TradeOfferHelper.registerVillagerOffers(job, level,  factories -> factories.addAll(
                     List.of(new VillagerTrades.ItemListing[]{
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[0], cost, sellCount, maxUse, priceMod, xp, isEnchanted), SAVANNA),
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[1], cost, sellCount, maxUse, priceMod, xp, isEnchanted), PLAINS),
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[2], cost, sellCount, maxUse, priceMod, xp, isEnchanted), SWAMP),
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[3], cost, sellCount, maxUse, priceMod, xp, isEnchanted), JUNGLE, DESERT),
-                            VillagerTrades.TypeSpecificTrade.oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[4], cost, sellCount, maxUse, priceMod, xp, isEnchanted), TAIGA, VillagerType.SNOW)
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[0], cost, sellCount, maxUse, priceMod, xp, isEnchanted), SAVANNA),
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[1], cost, sellCount, maxUse, priceMod, xp, isEnchanted), PLAINS),
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[2], cost, sellCount, maxUse, priceMod, xp, isEnchanted), SWAMP),
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[3], cost, sellCount, maxUse, priceMod, xp, isEnchanted), JUNGLE, DESERT),
+                            mstv$TypeSpecificTrade.mstv$oneTradeInBiomes(itemForEmeraldsTrade(soldVariants[4], cost, sellCount, maxUse, priceMod, xp, isEnchanted), TAIGA, VillagerType.SNOW)
                     })
             ));
             if (!affectedVillagers.contains(job)){
@@ -277,6 +280,30 @@ public class MstvVillagerTrades {
                 return new VillagerTrades.EnchantedItemForEmeralds(item, cost, maxUse, xp);
             } else {
                 return new VillagerTrades.EnchantedItemForEmeralds(item, cost, maxUse, xp, mod);
+            }
+        }
+    }
+
+    // Re-implementation of 1.20.2-pre1+'s VillagerTrades.TypeSpecificTrade record with oneTradeInBiomes method
+
+    public static record mstv$TypeSpecificTrade(Map<VillagerType, VillagerTrades.ItemListing> tradesByType) implements VillagerTrades.ItemListing {
+
+        public mstv$TypeSpecificTrade(Map<VillagerType, VillagerTrades.ItemListing> tradesByType) {
+            this.tradesByType = tradesByType;
+        }
+
+        public static mstv$TypeSpecificTrade mstv$oneTradeInBiomes(VillagerTrades.ItemListing itemListing, VillagerType... types){
+            return new mstv$TypeSpecificTrade(Arrays.stream(types).collect(Collectors.toMap(villagerType -> villagerType, villagertype -> itemListing)));
+        }
+
+        @Override
+        public @Nullable MerchantOffer getOffer(Entity trader, RandomSource random) {
+            if (trader instanceof VillagerDataHolder villagerDataHolder) {
+                VillagerType villagerType = villagerDataHolder.getVillagerData().getType();
+                VillagerTrades.ItemListing itemListing = (VillagerTrades.ItemListing)this.tradesByType.get(villagerType);
+                return itemListing == null ? null : itemListing.getOffer(trader, random);
+            } else {
+                return null;
             }
         }
     }
