@@ -1,5 +1,8 @@
 package de.pnku.mstv_base.trade;
 
+import de.pnku.mbdv.MoreBedVariants;
+import de.pnku.mbdv.init.MbdvBlockInit;
+import de.pnku.mbdv.init.MbdvItemInit;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.util.RandomSource;
