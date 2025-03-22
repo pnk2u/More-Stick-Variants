@@ -5,6 +5,7 @@ import com.llamalad7.mixinextras.sugar.ref.LocalIntRef;
 import de.pnku.mstv_base.MoreStickVariants;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.GlobalPos;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.npc.*;
 import net.minecraft.world.item.Item;
@@ -44,8 +45,8 @@ public abstract class AbstractVillagerMixin {
     @Unique
     List<Item> initializedTrades = new ArrayList<>();
     @Unique
-    private Item getDefaultStick(VillagerType type){
-            return (!FabricLoader.getInstance().isModLoaded("lolmft") && !type.equals(VillagerType.PLAINS)) ? Items.STICK : BIRCH_STICK;
+    private Item getDefaultStick(ResourceKey<VillagerType> typeKey){
+            return (!FabricLoader.getInstance().isModLoaded("lolmft") && !typeKey.equals(VillagerType.PLAINS)) ? Items.STICK : BIRCH_STICK;
     }
 
     @Unique
@@ -57,20 +58,23 @@ public abstract class AbstractVillagerMixin {
             VillagerData vData = villager.getVillagerData();
             ItemStack playerOffer = addedOffer.getBaseCostA();
             ItemStack villagerOffer = addedOffer.getResult();
-            if (affectedVillagers.contains(vData.getProfession())) {
+            int vLevel = vData.level();
+            ResourceKey<VillagerProfession> professionKey = vData.profession().unwrapKey().isPresent() ? vData.profession().unwrapKey().get() : VillagerProfession.NONE;
+            ResourceKey<VillagerType> typeKey = vData.type().unwrapKey().isPresent() ? vData.type().unwrapKey().get() : VillagerType.PLAINS;
+            if (affectedVillagers.contains(professionKey)) {
                 boolean paintingSpecialCase = FabricLoader.getInstance().isModLoaded("mstv-mframev")
-                                            && vData.getProfession().equals(VillagerProfession.SHEPHERD)
+                                            && professionKey.equals(VillagerProfession.SHEPHERD)
                                             && villagerOffer.getItem().equals(Items.PAINTING);
 
                 boolean crossbowSpecialCase = FabricLoader.getInstance().isModLoaded("mstv-mweaponv")
-                                            && vData.getType().equals(VillagerType.SWAMP)
+                                            && typeKey.equals(VillagerType.SWAMP)
                                             && villagerOffer.getItem().equals(Items.CROSSBOW);
 
                 boolean shieldSpecialCase   = FabricLoader.getInstance().isModLoaded("lolmsv")
-                                            && (vData.getType().equals(VillagerType.TAIGA) || vData.getType().equals(VillagerType.SNOW))
+                                            && (typeKey.equals(VillagerType.TAIGA) || typeKey.equals(VillagerType.SNOW))
                                             && villagerOffer.getItem().equals(Items.SHIELD);
 
-                boolean defaultCase = !vData.getType().equals(VillagerType.PLAINS)
+                boolean defaultCase = !typeKey.equals(VillagerType.PLAINS)
                                     && !crossbowSpecialCase
                                     && !shieldSpecialCase;
 
@@ -92,7 +96,7 @@ public abstract class AbstractVillagerMixin {
                     this.initializedTrades.clear();
                 }
             }
-            if (vData.getProfession() == VillagerProfession.FLETCHER && vData.getLevel() == 1) {
+            if (professionKey == VillagerProfession.FLETCHER && vLevel == 1) {
                 if (this.hasForeignStickTrade && this.hasNonStickTrade) {
                     this.hasForeignStickTrade = false;
                     this.hasNonStickTrade = false;
@@ -103,14 +107,14 @@ public abstract class AbstractVillagerMixin {
                     if (jobSite.isPresent() && this.myFletchingTable.equals(Blocks.AIR)) {
                         this.myFletchingTable = abstractVillager.level().getBlockState(jobSite.get().pos()).getBlock();
                     }
-                    this.localStick = fletcherLocalSticksBuyOffers.get(vData.getType());
-                    if (vData.getType() != VillagerType.PLAINS) {
+                    this.localStick = fletcherLocalSticksBuyOffers.get(typeKey);
+                    if (typeKey != VillagerType.PLAINS) {
                         if (playerOffer.getItem() == Items.STICK && playerOffer.getCount() == 32) {
                             counter.set(0);
                             return false;
                         }
                     }
-                    if (all_sticks.contains((playerOffer.getItem())) && !(fletcherLocalSticksBuyOffers.get(vData.getType()).equals(playerOffer.getItem())) && !fletchingTableToStick.getOrDefault(this.myFletchingTable, this.getDefaultStick(vData.getType())).equals(playerOffer.getItem()) && !this.hasForeignStickTrade) {
+                    if (all_sticks.contains((playerOffer.getItem())) && !(fletcherLocalSticksBuyOffers.get(typeKey).equals(playerOffer.getItem())) && !fletchingTableToStick.getOrDefault(this.myFletchingTable, this.getDefaultStick(typeKey)).equals(playerOffer.getItem()) && !this.hasForeignStickTrade) {
                         this.hasForeignStickTrade = true;
                         counter.set(0);
                         return givenOffers.add(addedOffer);
@@ -135,16 +139,19 @@ public abstract class AbstractVillagerMixin {
         if (abstractVillager instanceof Villager villager) {
             VillagerData vData = villager.getVillagerData();
             Item tableBasedStick;
-            if (vData.getProfession() == VillagerProfession.FLETCHER && vData.getLevel() == 1) {
+            int vLevel = vData.level();
+            ResourceKey<VillagerProfession> professionKey = vData.profession().unwrapKey().isPresent() ? vData.profession().unwrapKey().get() : VillagerProfession.NONE;
+            ResourceKey<VillagerType> typeKey = vData.type().unwrapKey().isPresent() ? vData.type().unwrapKey().get() : VillagerType.PLAINS;
+            if (professionKey == VillagerProfession.FLETCHER && vLevel == 1) {
                 MerchantOffer tableBasedOffer;
-                if (fletcherLocalFletchingTable.containsKey(vData.getType())) {
+                if (fletcherLocalFletchingTable.containsKey(typeKey)) {
                 Block fletchingTable = this.myFletchingTable;
-                    tableBasedStick = fletchingTableToStick.getOrDefault(fletchingTable, this.getDefaultStick(vData.getType()));
-                    if (fletcherLocalFletchingTable.get(vData.getType()).equals(fletchingTable)) {
+                    tableBasedStick = fletchingTableToStick.getOrDefault(fletchingTable, this.getDefaultStick(typeKey));
+                    if (fletcherLocalFletchingTable.get(typeKey).equals(fletchingTable)) {
                         this.hasLocalFletchingTable = true;
                     }
-                } else {tableBasedStick = this.getDefaultStick(vData.getType());}
-                tableBasedOffer = new MerchantOffer(new ItemCost(tableBasedStick, !this.getDefaultStick(vData.getType()).equals(Items.STICK) ? 24 : 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
+                } else {tableBasedStick = this.getDefaultStick(typeKey);}
+                tableBasedOffer = new MerchantOffer(new ItemCost(tableBasedStick, !this.getDefaultStick(typeKey).equals(Items.STICK) ? 24 : 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
                 Item localStick = this.localStick == null ? Items.AIR : this.localStick;
                 MerchantOffer localBasedOffer = new MerchantOffer(new ItemCost(localStick, 32), new ItemStack(Items.EMERALD), 16, 2, 0.05F);
                 if(givenMerchantOffers.stream().noneMatch(merchantOffer -> merchantOffer.getBaseCostA().getItem().equals(tableBasedOffer.getBaseCostA().getItem()))) {

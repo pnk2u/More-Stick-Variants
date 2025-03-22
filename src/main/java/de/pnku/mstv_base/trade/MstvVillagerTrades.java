@@ -1,10 +1,8 @@
 package de.pnku.mstv_base.trade;
 
-import de.pnku.mbdv.MoreBedVariants;
-import de.pnku.mbdv.init.MbdvBlockInit;
-import de.pnku.mbdv.init.MbdvItemInit;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.VillagerType;
@@ -36,9 +34,9 @@ import static net.minecraft.world.item.Items.*;
 
 public class MstvVillagerTrades {
 
-    public static Map<VillagerType, Item> fletcherLocalSticksBuyOffers = new HashMap<>();
-    public static List<Map<VillagerType, Item>> fletcherForeignSticksBuyOffers = new ArrayList<>();
-    public static Map<VillagerType, Block> fletcherLocalFletchingTable = new HashMap<>();
+    public static Map<ResourceKey<VillagerType>, Item> fletcherLocalSticksBuyOffers = new HashMap<>();
+    public static List<Map<ResourceKey<VillagerType>, Item>> fletcherForeignSticksBuyOffers = new ArrayList<>();
+    public static Map<ResourceKey<VillagerType>, Block> fletcherLocalFletchingTable = new HashMap<>();
     public static Map<Block, Item> fletchingTableToStick = new HashMap<>();
 
     public static boolean isMFletchingTableVLoaded = false;
@@ -52,7 +50,7 @@ public class MstvVillagerTrades {
     public static boolean isMBookshelfVLoaded = false;
 
     public static List<Item> replacedTrades = new ArrayList<>();
-    public static List<VillagerProfession> affectedVillagers = new ArrayList<>();
+    public static List<ResourceKey<VillagerProfession>> affectedVillagers = new ArrayList<ResourceKey<VillagerProfession>>();
     protected static float lowMod = 0.05F;
     protected static float highMod = 0.2F;
 
@@ -86,7 +84,7 @@ public class MstvVillagerTrades {
             fletcherForeignSticksBuyOffers.add(new HashMap<>());
         }
 
-        for (VillagerType type : fletcherLocalSticksBuyOffers.keySet()) {
+        for (ResourceKey<VillagerType> type : fletcherLocalSticksBuyOffers.keySet()) {
             Item localStick = fletcherLocalSticksBuyOffers.get(type);
             int mapIndex = 0;
 
@@ -99,7 +97,7 @@ public class MstvVillagerTrades {
         }
 
         TradeOfferHelper.registerVillagerOffers(FLETCHER, 1, factories -> {
-            for (Map<VillagerType, Item> stickMap : fletcherForeignSticksBuyOffers) {
+            for (Map<ResourceKey<VillagerType>, Item> stickMap : fletcherForeignSticksBuyOffers) {
                 factories.add(new VillagerTrades.EmeraldsForVillagerTypeItem(24, 16, 2, stickMap));
             }
         });
@@ -249,7 +247,7 @@ public class MstvVillagerTrades {
     }
     // Internal Methods below
 
-    public static void registerBiomeSpecificSellOffers(VillagerProfession job, int level, int cost, int sellCount, int xp, int maxUse, float priceMod, boolean isEnchanted, Item[] soldVariants){
+    public static void registerBiomeSpecificSellOffers(ResourceKey<VillagerProfession> job, int level, int cost, int sellCount, int xp, int maxUse, float priceMod, boolean isEnchanted, Item[] soldVariants){
         if (soldVariants.length == 5){
             TradeOfferHelper.registerVillagerOffers(job, level,  factories -> factories.addAll(
                     List.of(new VillagerTrades.ItemListing[]{
@@ -284,7 +282,7 @@ public class MstvVillagerTrades {
         }
     }
 
-    private static Map<VillagerType, Block> initTypeToMftMap(){
+    private static Map<ResourceKey<VillagerType>, Block> initTypeToMftMap(){
         return Map.of(  SAVANNA,    ACACIA_FLETCHING_TABLE,
                         PLAINS,     OAK_FLETCHING_TABLE,
                         SWAMP,      DARK_OAK_FLETCHING_TABLE,
