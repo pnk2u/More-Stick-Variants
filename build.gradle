@@ -104,9 +104,9 @@ dependencies {
 		// More Bed Variants
 		modLocalRuntime "maven.modrinth:more-bed-variants:${project.mbedv_version_id}"
 		// More Bookshelf Variants
-		modLocalRuntime "maven.modrinth:more-bookshelf-variants-lieonlion:${project.mbookshelfv_version_id}"
+	/*	modLocalRuntime "maven.modrinth:more-bookshelf-variants-lieonlion:${project.mbookshelfv_version_id}"
 		modLocalRuntime "maven.modrinth:quad:${project.quad_version_id}"
-	/**/
+	*/
 }
 
 processResources {

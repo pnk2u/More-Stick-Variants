@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.nemonotfound.nemoscampfires.item.ModItems.*;
+import static com.nemonotfound.nemos.campfires.item.ModItems.*;
 import static de.pnku.lolmsv.item.MoreShieldVariantItems.*;
 import static de.pnku.mbdv.init.MbdvItemInit.*;
 import static de.pnku.mft.init.MftBlockInit.*;
