@@ -31,7 +31,15 @@ fabricApi {
 
 def getParchmentWithDecrementedMC(minecraftVersion) {
 	def url = 'https://versioning.parchmentmc.org/versions'
-	def json = new JsonSlurper().parseText(new URI(url).toURL().text)
+	def response
+	try {
+		response = new URI(url).toURL().text
+		if (response.length() < 100) throw new Exception("Response too short")
+	} catch (Exception e) {
+		println "Loading local fallback due to: ${e.message}"
+		response = new File("../../resources/versioning.parchmentmc.org/versions").text
+	}
+	def json = new JsonSlurper().parseText(response)
 	def releases = json['releases']
 
 	// Truncate version after first non-integer/dot
