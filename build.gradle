@@ -106,7 +106,7 @@ dependencies {
 		// More Bookshelf Variants
 		modLocalRuntime "maven.modrinth:more-bookshelf-variants-lieonlion:${project.mbookshelfv_version_id}"
 		modLocalRuntime "maven.modrinth:quad:${project.quad_version_id}"
-	/**/
+
 }
 
 processResources {
