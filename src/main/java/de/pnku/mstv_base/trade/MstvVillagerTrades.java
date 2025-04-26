@@ -26,7 +26,7 @@ import static de.pnku.mstv_mframev.item.MoreFrameVariantItems.*;
 import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.*;
 import static de.pnku.mstv_mweaponv.item.MoreWeaponVariantItems.*;
 import static de.pnku.mstv_mtoolv.item.MoreToolVariantItems.*;
-import static io.github.lieonlion.lolmbv.init.MbvItemInit.*;
+import static dev.lieonlion.lolmbv.init.MbvItemInit.*;
 import static net.minecraft.world.entity.npc.VillagerType.*;
 import static net.minecraft.world.entity.npc.VillagerProfession.*;
 import static net.minecraft.world.item.Items.*;
