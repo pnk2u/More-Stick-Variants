@@ -92,6 +92,8 @@ dependencies {
 		modCompileOnly "maven.modrinth:more-fletching-tables:${project.mfletchingtablev_version_id}"
 		// More Shield Variants
 		modCompileOnly "maven.modrinth:more-shield-variants:${project.mshieldv_version_id}"
+			// More Extra Shield Variants
+			modCompileOnly "maven.modrinth:more-extra-shield-variants:${project.mxshieldv_version_id}"
 		// More Bed Variants
 		modCompileOnly "maven.modrinth:more-bed-variants:${project.mbedv_version_id}"
 		// More Bookshelf Variants
