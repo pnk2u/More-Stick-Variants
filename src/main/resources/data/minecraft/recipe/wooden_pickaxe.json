@@ -23,7 +23,7 @@
   "category": "equipment",
   "key": {
     "#": "#mstv-base:sticks",
-    "X": "#minecraft:planks"
+    "X": "#minecraft:wooden_tool_materials"
   },
   "pattern": [
     "XXX",

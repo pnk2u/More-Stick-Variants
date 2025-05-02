@@ -1,5 +1,6 @@
 package de.pnku.mstv_base.trade;
 
+import de.pnku.shields_mxsv.item.MoreExtraShieldVariantItems;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceKey;
@@ -46,6 +47,7 @@ public class MstvVillagerTrades {
     public static boolean isMFishingRodVLoaded = false;
     public static boolean isNemosCampfireVLoaded = false;
     public static boolean isMShieldVLoaded = false;
+    public static boolean isMXShieldVLoaded = false;
     public static boolean isMBedVLoaded = false;
     public static boolean isMBookshelfVLoaded = false;
 
@@ -62,7 +64,7 @@ public class MstvVillagerTrades {
         if (isMFrameVLoaded) registerMframevTrades();
         if (isMFishingRodVLoaded) registerMfrodvTrades();
         if (isNemosCampfireVLoaded) registerNemocampfirevTrades();
-        if (isMShieldVLoaded) registerMshieldvTrades();
+        if (isMShieldVLoaded) registerMshieldvTrades(isMXShieldVLoaded);
         if (isMBedVLoaded) registerMbedvTrades();
         if (isMBookshelfVLoaded) registerMbookshelfvTrades();
     }
@@ -204,10 +206,16 @@ public class MstvVillagerTrades {
         replacedTrades.add(CAMPFIRE);
     }
 
-    private static void registerMshieldvTrades(){
+    private static void registerMshieldvTrades(boolean isMXShieldVLoaded){
       // Armorer
         // Shield Sell
-        registerBiomeSpecificSellOffers(ARMORER, 3, 5, 1, 10, 12, highMod, false, new Item[]{ACACIA_SHIELD, OAK_SHIELD, DARK_OAK_SHIELD, JUNGLE_SHIELD, SHIELD});
+        if (!isMXShieldVLoaded){
+            LOGGER.info("Registering mShieldV VillagerTrades");
+            registerBiomeSpecificSellOffers(ARMORER, 3, 5, 1, 10, 12, highMod, false, new Item[]{ACACIA_SHIELD, OAK_SHIELD, DARK_OAK_SHIELD, JUNGLE_SHIELD, SHIELD});
+        } else {
+            LOGGER.info("Registering mXShieldV VillagerTrades");
+            registerBiomeSpecificSellOffers(ARMORER, 3, 5, 1, 10, 12, highMod, false, new Item[]{MoreExtraShieldVariantItems.ACACIA_SHIELD, MoreExtraShieldVariantItems.OAK_SHIELD, MoreExtraShieldVariantItems.DARK_OAK_SHIELD, MoreExtraShieldVariantItems.JUNGLE_SHIELD, SHIELD});
+        }
 
         replacedTrades.add(SHIELD);
     }
@@ -320,6 +328,7 @@ public class MstvVillagerTrades {
         isMFishingRodVLoaded = isLoaded("mstv-mfrv");
         isNemosCampfireVLoaded = isLoaded("nemos-campfires");
         isMShieldVLoaded = isLoaded("lolmsv");
+        isMXShieldVLoaded = isLoaded("shields-mxsv");
         isMBedVLoaded = isLoaded("quad-lolmbdv");
         isMBookshelfVLoaded = isLoaded("lolmbv");
     }
