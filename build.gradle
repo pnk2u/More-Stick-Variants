@@ -1,7 +1,8 @@
 import groovy.json.JsonSlurper
+import groovy.xml.XmlSlurper
 
 plugins {
-	id 'fabric-loom' version '1.10-SNAPSHOT'
+	id 'fabric-loom'
 	id 'maven-publish'
 }
 
@@ -27,6 +28,35 @@ loom {
 }
 
 fabricApi {
+}
+
+def getReleaseVersion(minecraftVersion) {
+	// Truncate version after first non-integer/dot
+	def releaseVersion = minecraftVersion.replaceAll(/[^0-9.].*/, '')
+	if (minecraftVersion != releaseVersion) {println('==='); println('Resolved \"' + minecraftVersion + '\" as \"' + releaseVersion + '\" for Fabric and Parchment.'); println('===')}
+	return releaseVersion
+}
+
+def releaseVersion = getReleaseVersion(minecraft_version)
+
+def getLatestFabric(minecraftVersion) {
+	def fApiXmlUrl = 'https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/maven-metadata.xml'
+	def fLoaderJsonUrl = 'https://meta.fabricmc.net/v2/versions/loader'
+
+	def fLoaderJson = new JsonSlurper().parseText(new URI(fLoaderJsonUrl).toURL().text)
+	def fLoaderLatestVersion = fLoaderJson.get(0).version
+	println('Fabric Loader: ' + fLoaderLatestVersion)
+
+	def fApiLatestVersion
+	try {
+		def metadata = new XmlSlurper().parse(fApiXmlUrl)
+		def versions = metadata.versioning.versions.version*.text()
+		fApiLatestVersion = versions.findAll { it ==~ /\d+(\.\d+)*.${minecraftVersion}/ }.last()
+		println('Fabric Api: ' + fApiLatestVersion)
+	} catch (Exception e) {
+		throw new GradleException("Failed to fetch $fApiXmlUrl: ${e.message}")
+	}
+	return [fLoaderLatestVersion, fApiLatestVersion]
 }
 
 def getParchmentWithDecrementedMC(minecraftVersion) {
@@ -60,16 +90,19 @@ def getParchmentWithDecrementedMC(minecraftVersion) {
 			patch = 7
 		}
 	}
+
 	def foundVersion = "$major.$minor.$patch"
 	if (releases[foundVersion]) {
 		def parchmentDate = releases[foundVersion]
 		logger.print("Parchment: " + foundVersion + " + " + parchmentDate as String + "\n")
 		return [decrementedVersion, foundVersion, parchmentDate]
 	}
+
 	throw new GradleException("No valid Parchment version found for $minecraftVersion or earlier.")
 }
 
-def (decrementedVersion, pMinecraftVersion, mostRecentParchmentDate) = getParchmentWithDecrementedMC(project.minecraft_version)
+def (fabric_loader_version, fabric_api_version) = getLatestFabric(releaseVersion)
+def (decrementedVersion, pMinecraftVersion, mostRecentParchmentDate) = getParchmentWithDecrementedMC(releaseVersion)
 
 dependencies {
 	implementation 'org.apache.commons:commons-text:1.12.0'
@@ -78,8 +111,8 @@ dependencies {
 		officialMojangMappings()
 		parchment("org.parchmentmc.data:parchment-${pMinecraftVersion}:${mostRecentParchmentDate}@zip")
 	}
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fapi_version}"
+	modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
 
 	// MStV+ Villager Trades
 	modCompileOnly "maven.modrinth:more-weapon-variants:${project.mweaponv_version_id}"
@@ -121,7 +154,7 @@ dependencies {
 
 processResources {
 	var replaceProperties = [
-			loader_version: loader_version, mod_id: mod_id, mod_name: mod_name,
+			loader_version: fabric_loader_version, mod_id: mod_id, mod_name: mod_name,
 			mod_license: mod_license, mod_version: mod_version,
 			mod_description: mod_description, minecraft_version: minecraft_version, minecraft_version_0: decrementedVersion
 	]
