@@ -201,13 +201,6 @@ def minecraft_version_1() {
 	else {return "2.0.0"} // Effectively no upper bound
 }
 
-
-def minecraft_version_1() {
-	String key = 'minecraft_version_upper'
-	if (project.hasProperty(key)) {String value = project.getProperties().get(key); return !value.isEmpty() ? value : "2.0.0"}
-	else {return "2.0.0"} // Effectively no upper bound
-}
-
 processResources {
 	// Disregard Patch version from Fabric Loader for dependency
 	var fabric_loader_version_0 = "${fabric_loader_version}".replaceFirst(/\.[^.]*$/, '.0')
