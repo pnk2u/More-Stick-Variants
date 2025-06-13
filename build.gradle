@@ -2,11 +2,16 @@ import groovy.json.JsonSlurper
 import groovy.xml.XmlSlurper
 
 plugins {
-	id 'fabric-loom'
+	id 'fabric-loom' // version from latest-loom.gradle via settings.gradle's pluginManagement
 	id 'maven-publish'
 }
 
-version = "${mod_version}+${minecraft_version}-Fabric"
+def mc_version_name(){
+	String key = 'minecraft_version_name'
+	if (project.hasProperty(key)) {String value = project.getProperties().get(key); return !value.isEmpty() ? value : project.minecraft_version}
+	else {return project.minecraft_version}
+}
+version = "${mod_version}+${mc_version_name()}-Fabric"
 group = project.maven_group
 
 base {
@@ -152,11 +157,22 @@ dependencies {
 	/**/
 }
 
+
+def minecraft_version_1() {
+	String key = 'minecraft_version_upper'
+	if (project.hasProperty(key)) {String value = project.getProperties().get(key); return !value.isEmpty() ? value : "2.0.0"}
+	else {return "2.0.0"} // Effectively no upper bound
+}
+
 processResources {
+	// Disregard Patch version from Fabric Loader for dependency
+	var fabric_loader_version_0 = "${fabric_loader_version}".replaceFirst(/\.[^.]*$/, '.0')
+
 	var replaceProperties = [
-			loader_version: fabric_loader_version, mod_id: mod_id, mod_name: mod_name,
+			loader_version: fabric_loader_version_0, mod_id: mod_id, mod_name: mod_name,
 			mod_license: mod_license, mod_version: mod_version,
-			mod_description: mod_description, minecraft_version: minecraft_version, minecraft_version_0: decrementedVersion
+			mod_description: mod_description, quad_version: quad_version,
+			minecraft_version: minecraft_version, minecraft_version_0: decrementedVersion, minecraft_version_1: minecraft_version_1()
 	]
 	inputs.properties replaceProperties
 
