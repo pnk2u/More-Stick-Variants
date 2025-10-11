@@ -1,5 +1,5 @@
 ### 1.4.7:
-- `1.21.4+` Incorporate new wooden_tool_materials tag to fix crafting compatibility issues even when using **More Compatibility Variants ([Biomes o' Plenty](https://modrinth.com/datapack/more-compatibility-variants-bop), [\[Let's Do\]](https://modrinth.com/datapack/more-compatibility-variants-lets-do), [Nature's Spirit](https://modrinth.com/datapack/more-compatibility-variants-ns), [Oh The Biomes We've Gone](https://modrinth.com/datapack/more-compatibility-variants-otbwg))**
+- `1.21.4+`: Incorporate new wooden_tool_materials tag to fix crafting compatibility issues even when using **More Compatibility Variants ([Biomes o' Plenty](https://modrinth.com/datapack/more-compatibility-variants-bop), [\[Let's Do\]](https://modrinth.com/datapack/more-compatibility-variants-lets-do), [Nature's Spirit](https://modrinth.com/datapack/more-compatibility-variants-ns), [Oh The Biomes We've Gone](https://modrinth.com/datapack/more-compatibility-variants-otbwg))**
 ### 1.4.6:
 - `1.21(.1)`: Fix crash when creating/joining a world with both _[More Shield Variants](https://modrinth.com/mod/more-shield-variants)_ and _[More Extra Shield Variants](https://modrinth.com/mod/more-extra-shield-variants)_<sup> </sup>/ _[Extra Shields](https://modrinth.com/mod/extra-shields)_ installed
 ### 1.4.5:
