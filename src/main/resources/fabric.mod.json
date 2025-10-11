@@ -24,6 +24,7 @@
   "mixins": [
     "mstv-base.trade.mixins.json"
   ],
+  "accessWidener": "mstv-base.accesswidener",
   "depends": {
 		"fabricloader": ">=${loader_version}",
 		"minecraft": ">${minecraft_version_0} <${minecraft_version_1}",

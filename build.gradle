@@ -30,6 +30,7 @@ repositories {
 }
 
 loom {
+    accessWidenerPath = file("src/main/resources/mstv-base.accesswidener")
 }
 
 fabricApi {
