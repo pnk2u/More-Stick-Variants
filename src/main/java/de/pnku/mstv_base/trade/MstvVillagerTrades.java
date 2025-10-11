@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.nemonotfound.nemos.campfires.item.ModItems.*;
+import static com.devnemo.nemos.campfires.world.item.NemosCampfiresItems.*;
 import static de.pnku.lolmsv.item.MoreShieldVariantItems.*;
 import static de.pnku.mbdv.init.MbdvItemInit.*;
 import static de.pnku.mft.init.MftBlockInit.*;
@@ -52,7 +52,7 @@ public class MstvVillagerTrades {
     public static boolean isMBookshelfVLoaded = false;
 
     public static List<Item> replacedTrades = new ArrayList<>();
-    public static List<ResourceKey<VillagerProfession>> affectedVillagers = new ArrayList<ResourceKey<VillagerProfession>>();
+    public static List<ResourceKey<VillagerProfession>> affectedVillagers = new ArrayList<>();
     protected static float lowMod = 0.05F;
     protected static float highMod = 0.2F;
 
@@ -201,7 +201,7 @@ public class MstvVillagerTrades {
     private static void registerNemocampfirevTrades(){
       // Fisher
         // Campfire Sell
-        registerBiomeSpecificSellOffers(FISHERMAN, 2, 2, 1, 5, 12, lowMod, false, new Item[]{ACACIA_CAMPFIRE, CAMPFIRE, DARK_OAK_CAMPFIRE, JUNGLE_CAMPFIRE, SPRUCE_CAMPFIRE});
+        registerBiomeSpecificSellOffers(FISHERMAN, 2, 2, 1, 5, 12, lowMod, false, new Item[]{ACACIA_CAMPFIRE.get(), CAMPFIRE, DARK_OAK_CAMPFIRE.get(), JUNGLE_CAMPFIRE.get(), SPRUCE_CAMPFIRE.get()});
 
         replacedTrades.add(CAMPFIRE);
     }
