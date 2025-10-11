@@ -1,3 +1,5 @@
+### 1.4.8:
+- `1.21.9(10)`: Fix crash when Villager turns into a Fletcher
 ### 1.4.7:
 - `1.21.4+`: Incorporate new wooden_tool_materials tag to fix crafting compatibility issues even when using **More Compatibility Variants ([Biomes o' Plenty](https://modrinth.com/datapack/more-compatibility-variants-bop), [\[Let's Do\]](https://modrinth.com/datapack/more-compatibility-variants-lets-do), [Nature's Spirit](https://modrinth.com/datapack/more-compatibility-variants-ns), [Oh The Biomes We've Gone](https://modrinth.com/datapack/more-compatibility-variants-otbwg))**
 ### 1.4.6:
