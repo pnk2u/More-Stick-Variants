@@ -103,9 +103,9 @@ public abstract class AbstractVillagerMixin {
                     counter.set(2);
                     return true;
                 } else {
-                    Optional<GlobalPos> jobSite = ((Villager) abstractVillager).getBrain().getMemory(MemoryModuleType.JOB_SITE);
+                    Optional<GlobalPos> jobSite = villager.getBrain().getMemory(MemoryModuleType.JOB_SITE);
                     if (jobSite.isPresent() && this.myFletchingTable.equals(Blocks.AIR)) {
-                        this.myFletchingTable = abstractVillager.level().getBlockState(jobSite.get().pos()).getBlock();
+                        this.myFletchingTable = villager.level.getBlockState(jobSite.get().pos()).getBlock();
                     }
                     this.localStick = fletcherLocalSticksBuyOffers.get(typeKey);
                     if (typeKey != VillagerType.PLAINS) {
