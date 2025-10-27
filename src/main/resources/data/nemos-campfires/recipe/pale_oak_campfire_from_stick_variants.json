@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "fabric:load_conditions": [
+    {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "nemos-campfires"
+        ]
+    }
+  ],
+  "group": "campfires",
+  "key": {
+    "C": "#minecraft:coals",
+    "L": "#minecraft:pale_oak_logs",
+    "S": "#mstv-base:stick_variants"
+  },
+  "pattern": [
+    " S ",
+    "SCS",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nemos-campfires:pale_oak_campfire"
+  }
+}
