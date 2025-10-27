@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "fabric:load_conditions": [
+    {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "nemos-campfires"
+        ]
+    }
+  ],
+  "group": "soul_campfires",
+  "key": {
+    "#": "#minecraft:soul_fire_base_blocks",
+    "L": "#minecraft:pale_oak_logs",
+    "S": "#mstv-base:stick_variants"
+  },
+  "pattern": [
+    " S ",
+    "S#S",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nemos-campfires:pale_oak_soul_campfire"
+  }
+}
