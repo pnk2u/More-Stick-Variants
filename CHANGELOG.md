@@ -1,5 +1,6 @@
 <!--publish=false-->
 ### 1.4.9:
+- `1.21.4⁺`: Add missing compatibility recipes for [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires)' _**Pale Oak** Campfire_ variants
 - `1.21.10`: Add compatibility recipes for new [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires) variants (Copper, Redstone, Lapis Lazuli, Quartz)
     > **Note for** `1.21.8` and older versions:  
     If/when [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires) receives an update (`2.x`) again for versions older than `1.21.5`,
