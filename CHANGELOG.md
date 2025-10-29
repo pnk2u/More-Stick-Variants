@@ -1,4 +1,4 @@
-<!--publish=false-->
+<!--publish=true-->
 ### 1.4.9:
 - Fix recipe unlocking for _Stick Variant_ compatibility recipes for [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires) and improve the ones for [More Grindstone Variants](https://www.modrinth.com/mod/more-grindstone-variants)
 - `1.21.4⁺`: 
