@@ -5,23 +5,23 @@
     {
         "condition": "fabric:all_mods_loaded" ,
         "values": [
-          "nemos-campfires"
+          "nemos_campfires"
         ]
     }
   ],
-  "group": "campfires",
+  "group": "soul_campfires",
   "key": {
-    "C": "#minecraft:coals",
-    "L": "#minecraft:spruce_logs",
+    "#": "#minecraft:soul_fire_base_blocks",
+    "L": "#minecraft:warped_stems",
     "S": "#mstv-base:stick_variants"
   },
   "pattern": [
     " S ",
-    "SCS",
+    "S#S",
     "LLL"
   ],
   "result": {
     "count": 1,
-    "id": "nemos-campfires:spruce_campfire"
+    "id": "nemos_campfires:warped_soul_campfire"
   }
 }

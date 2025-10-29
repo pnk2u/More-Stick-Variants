@@ -5,7 +5,7 @@
     {
         "condition": "fabric:all_mods_loaded" ,
         "values": [
-          "nemos-campfires"
+          "nemos_campfires"
         ]
     }
   ],
@@ -22,6 +22,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "nemos-campfires:cherry_campfire"
+    "id": "nemos_campfires:cherry_campfire"
   }
 }
