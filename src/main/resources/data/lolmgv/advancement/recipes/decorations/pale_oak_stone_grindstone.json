@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "lolmgv"
+      ]
+    }
+  ],
+  "criteria": {
+    "has_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stone_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+     "has_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:pale_oak_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mstv-base:pale_oak_stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "lolmgv:pale_oak_stone_grindstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_slab"
+    ],
+    [
+      "has_the_recipe",
+      "has_planks",
+      "has_stick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "lolmgv:pale_oak_stone_grindstone"
+    ]
+  }
+}
