@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded" ,
+      "values": [
+        "nemos-campfires"
+      ]
+    }
+  ],
+  "criteria": {
+    "has_coal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:coals"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#mstv-base:stick_variants"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nemos-campfires:pale_oak_campfire_from_stick_variants"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_coal"
+    ],
+    [
+      "has_the_recipe",
+      "has_stick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nemos-campfires:pale_oak_campfire_from_stick_variants"
+    ]
+  }
+}
