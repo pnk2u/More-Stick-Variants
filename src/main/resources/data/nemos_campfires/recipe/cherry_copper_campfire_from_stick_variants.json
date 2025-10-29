@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "fabric:load_conditions": [
+    {
+        "condition": "fabric:all_mods_loaded" ,
+        "values": [
+          "nemos_campfires"
+        ]
+    },
+    {
+        "condition": "fabric:registry_contains",
+        "registry": "minecraft:item",
+        "values": [
+          "nemos_campfires:cherry_copper_campfire"
+        ]
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "nemos_campfires"
+    },
+    {
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "nemos_campfires:cherry_copper_campfire"
+    }
+  ],
+  "group": "copper_campfires",
+  "key": {
+    "#": "minecraft:copper_ingot",
+    "L": "#minecraft:cherry_logs",
+    "S": "#mstv-base:stick_variants"
+  },
+  "pattern": [
+    " S ",
+    "S#S",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nemos_campfires:cherry_copper_campfire"
+  }
+}
