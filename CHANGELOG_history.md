@@ -1,28 +1,5 @@
-# <img width='24' src="./src/main/resources/icon.png"> More Stick Variants
-> ![Mod Icon](https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png)
->
-> A mod adding wood variants for Minecraft's Stick Item as a base for many other mods requiring these sticks.
-
-### Compatibility
-
-- Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.10`
-- Mod Loader: _Fabric_
-- Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api)
-
-### ᴬ⃯ ᵦ⃔ Translations
-
-Currently available in:
-- English
-- German
-- Ukrainian (@[StarmanMine142](/../../../../StarmanMine142) with [PR #6](../../pull/6)/[7](../../pull/7), added in [`1.3.1`](/../../#131))
-
-Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1)`)**.
-
-### Changelog History
-
-<!--CHANGELOG:START-->
 ### 1.4.8:
-- `1.21.9(10)`: Fix crash when Fletcher tries to aquire a Fletching Table
+- `1.21.9(10)`: Fix crash when Villager turns into a Fletcher
 ### 1.4.7:
 - `1.21.4+`: Incorporate new wooden_tool_materials tag to fix crafting compatibility issues even when using **More Compatibility Variants ([Biomes o' Plenty](https://modrinth.com/datapack/more-compatibility-variants-bop), [\[Let's Do\]](https://modrinth.com/datapack/more-compatibility-variants-lets-do), [Nature's Spirit](https://modrinth.com/datapack/more-compatibility-variants-ns), [Oh The Biomes We've Gone](https://modrinth.com/datapack/more-compatibility-variants-otbwg))**
 ### 1.4.6:
@@ -38,13 +15,13 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 - `1.21.4⁺`: Add _**Pale Oak** Stick_ to items that can be used as fuel when Quad is installed
 ### 1.4.1:
 - Fix visual bug turning [More Bed Variants](https://modrinth.com/mod/more-bed-variants)' items invisible
-## 1.4.0:
-Villagers now **buy and sell** item **variants** from all installed MStV+ mods. Their trades adapt to their **Village Type**, meaning:
-- A ***Savanna* Villager** sells an ***Acacia* Bow**¹ instead of an Oak Bow.
+## 1.4.0: 
+Villagers now **buy and sell** item **variants** from all installed MStV+ mods. Their trades adapt to their **Village Type**, meaning:  
+- A ***Savanna* Villager** sells an ***Acacia* Bow**¹ instead of an Oak Bow.  
 - A ***Snow* Villager** sells a ***Spruce* Pickaxe**² instead of an Oak Pickaxe.  
-  **¹**<sup>: [More Weapon Variants](https://modrinth.com/mod/more-weapon-variants), </sup>**²**<sup>: [More Tool Variants](https://modrinth.com/mod/more-tool-variants)</sup>
+**¹**<sup>: [More Weapon Variants](https://modrinth.com/mod/more-weapon-variants), </sup>**²**<sup>: [More Tool Variants](https://modrinth.com/mod/more-tool-variants)</sup>
 
-### **Buying (Fletcher):**
+### **Buying (Fletcher):**   
 Fletchers now use a custom system for determining their **stick-buying trades** to include all Sticks from [**More Stick Variants**](https://modrinth.com/mod/more-stick-variants) while giving the player some control over their exact trades:
 
 | Stick Type         | Amount per Emerald | Selection Criteria                                                                  |
@@ -55,12 +32,12 @@ Fletchers now use a custom system for determining their **stick-buying trades** 
 | **Standard Trade** | -                  | A regular non-stick trade (e.g. Gravel → Flint)                                    |
 
 If the **Local Stick** and Table/**Favorite Stick** overlap, the Table/**Favorite Stick** price (24 sticks) takes priority.  
-The **Foreign Stick** trade always excludes the **Favorite Stick** type.
+The **Foreign Stick** trade always excludes the **Favorite Stick** type.  
 
 **¹**: If you don't have [**More Fletching Tables**](https://modrinth.com/mod/more-fletching-tables) installed, the Table/**Favorite Stick** trade defaults to 32 Vanilla/Oak Sticks per Emerald in all Villages, except for Plains where it will be a Birch Stick for 24 Emeralds per Stick.
 
-### **Selling (MStV+⁺):**
-When MStV+ mods are installed, villagers **replace** Vanilla/Oak trades with biome-based variant items:
+### **Selling (MStV+⁺):**  
+When MStV+ mods are installed, villagers **replace** Vanilla/Oak trades with biome-based variant items:  
 
 | Mod                                                                                      | Profession           | Trade                                                       |
 | ---------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------- |
@@ -101,11 +78,11 @@ When MStV+ mods are installed, villagers **replace** Vanilla/Oak trades with bio
 ## 1.3.0:
 - `1.21.4`: Update to 1.21.4
 - `1.21.3⁺`: Add _**Pale Oak** Stick_ (necessary for newly added _**Pale Oak** Armor Stand_ in [More Armor Stand Variants <sup>`1.2.0`</sup>](https://modrinth.com/mod/more-armor-stand-variants/version/hFoMkuS7) and _**Pale Oak** (Glow) Item Frame/Painting_ in [More Frame Variants <sup>`1.2.0`</sup>](https://modrinth.com/mod/more-frame-variants/version/ZgRK3XlW)).
-  > ### Note:
-  > To use all features of the newly added _**Pale Oak** Stick_ in 1.21.3, please make sure to select the 1.21.3-exclusive built-in "_pale_oak_experimental_" datapack and apply it above the "_winter_drop_" datapack.  
-  These features namely include:
-  > - Pale Oak Leaves drop _**Pale Oak** Sticks_.
-  > - Pale Oak Fence/Fence Gate/Sign are now crafted exclusively using the _**Pale Oak** Stick_ instead of the vanilla Stick item.
+    > ### Note:   
+    > To use all features of the newly added _**Pale Oak** Stick_ in 1.21.3, please make sure to select the 1.21.3-exclusive built-in "_pale_oak_experimental_" datapack and apply it above the "_winter_drop_" datapack.  
+These features namely include:
+    > - Pale Oak Leaves drop _**Pale Oak** Sticks_. 
+    > - Pale Oak Fence/Fence Gate/Sign are now crafted exclusively using the _**Pale Oak** Stick_ instead of the vanilla Stick item.
 ### 1.2.3:
 - `1.20.6⁺`: Fix a few Vanilla/Oak Variant recipes not unlocking properly
 - `1.21.3`: Fix compatibility recipes for [More Grindstone Variants](https://modrinth.com/mod/more-grindstone-variants) and [Nemo's Campfires](https://modrinth.com/mod/nemos-campfires)
@@ -130,13 +107,3 @@ When MStV+ mods are installed, villagers **replace** Vanilla/Oak trades with bio
 - Increase Stick variant recipe result amount from 1 to 2
 ### 1.0.2:
 - Fix Stick variant item model being different from the vanilla Stick model
-
-<!--CHANGELOG:END-->
-
-> _`The section above is automatically updated with each new release and only includes already published releases.`_
----
-#### Support/Contact
-- Suggestions? Questions? Bug reports?  
-  Feel free to [open an issue](/../../issues)!  
-  &nbsp;  
-  You can also contact me via email at [contact@pnku.de](mailto:contact@pnku.de) or join the [Discord](https://dsc.lieonlion.dev) and contact me there.
