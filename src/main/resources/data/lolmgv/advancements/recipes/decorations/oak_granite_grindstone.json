@@ -33,7 +33,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["mstv-base:oak_stick"]
+            "items": ["minecraft:stick"]
           }
         ]
       },
