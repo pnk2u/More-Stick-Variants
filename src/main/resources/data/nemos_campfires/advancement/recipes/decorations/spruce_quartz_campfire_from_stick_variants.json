@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded" ,
+      "values": [
+        "nemos_campfires"
+      ]
+    },
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "nemos_campfires:spruce_quartz_campfire"
+      ]
+    }
+  ],
+  "criteria": {
+    "has_quartz": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:quartz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#mstv-base:stick_variants"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nemos_campfires:spruce_quartz_campfire_from_stick_variants"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_quartz"
+    ],
+    [
+      "has_the_recipe",
+      "has_stick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nemos_campfires:spruce_quartz_campfire_from_stick_variants"
+    ]
+  }
+}
