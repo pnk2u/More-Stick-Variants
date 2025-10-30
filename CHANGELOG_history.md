@@ -2,7 +2,6 @@
 - Fix crash on startup introduced in `1.4.9` due to a bug in a newer Loom version used for compiling
 
 ---
-> Looking for changes of previous versions?  
 ### 1.4.9:
 - Fix crash when used with [More Bed Variants](https://www.modrinth.com/mod/more-bed-variants) `2.1.0⁺`
 - Fix recipe unlocking for _Stick Variant_ compatibility recipes for [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires) and improve the ones for [More Grindstone Variants](https://www.modrinth.com/mod/more-grindstone-variants)
