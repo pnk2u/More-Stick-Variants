@@ -30,6 +30,9 @@ repositories {
 }
 
 loom {
+    mixin {
+        useLegacyMixinAp = true
+    }
     accessWidenerPath = file("src/main/resources/mstv-base.accesswidener")
 }
 
