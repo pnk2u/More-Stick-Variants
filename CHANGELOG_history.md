@@ -1,4 +1,5 @@
 ### 1.4.9:
+- Fix crash when used with [More Bed Variants](https://www.modrinth.com/mod/more-bed-variants) `2.1.0⁺`
 - Fix recipe unlocking for _Stick Variant_ compatibility recipes for [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires) and improve the ones for [More Grindstone Variants](https://www.modrinth.com/mod/more-grindstone-variants)
 - `1.21.4⁺`: 
   - Add missing compatibility recipes and advancements for [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires)' _**Pale Oak** Campfire_ variants
