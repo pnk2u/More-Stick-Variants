@@ -38,6 +38,7 @@ Currently available in:
 <sub><p align="center"><a title="Download (Modrinth): More Stick Variants - 1.4.10 + 1.21(.1)" href="https://modrinth.com/mod/more-stick-variants/version/lrRzuKvg"><img alt="Download on Modrinth: More Stick Variants - 1.4.10 + 1.21(.1)" height="26" width="26" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_vector.svg"></a><sup>&thinsp;&#x20;&#x8ce;&nbsp;&#x200a;&#x200a;&#x200a;&#x200a;</sup><a title="Download (Curseforge): More Stick Variants - 1.4.10 + 1.21(.1)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7167829"><img alt="Download on Curseforge: More Stick Variants - 1.4.10 + 1.21(.1)"  height="26" width="26" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_vector.svg"></a>&thinsp;&#x200a;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></sub>
 
 ---
+<a name="1.4.9"></a>
 ### 1.4.9:
 - Fix crash when used with [More Bed Variants](https://www.modrinth.com/mod/more-bed-variants) `2.1.0⁺`
 - Fix recipe unlocking for _Stick Variant_ compatibility recipes for [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires) and improve the ones for [More Grindstone Variants](https://www.modrinth.com/mod/more-grindstone-variants)
@@ -53,39 +54,48 @@ Currently available in:
     As [Nemo's Campfires](https://www.modrinth.com/mod/nemos-campfires) currently has no `2.x` version for `1.21.5(6)`, these compatibility recipes in `1.21.5(-10)` will no longer work in `1.21.5(6)` as long as no compatible `Nemo's Campfires 2.x` version exists.
 
 ---
+<a name="1.4.8"></a>
 ### 1.4.8:
 - `1.21.9(10)`: Fix crash when Villager turns into a Fletcher
 
 ---
+<a name="1.4.7"></a>
 ### 1.4.7:
 - `1.21.4+`: Incorporate new wooden_tool_materials tag to fix crafting compatibility issues even when using **More Compatibility Variants ([Biomes o' Plenty](https://modrinth.com/datapack/more-compatibility-variants-bop), [\[Let's Do\]](https://modrinth.com/datapack/more-compatibility-variants-lets-do), [Nature's Spirit](https://modrinth.com/datapack/more-compatibility-variants-ns), [Oh The Biomes We've Gone](https://modrinth.com/datapack/more-compatibility-variants-otbwg))**
 
 ---
+<a name="1.4.6"></a>
 ### 1.4.6:
 - `1.21(.1)`: Fix crash when creating/joining a world with both _[More Shield Variants](https://modrinth.com/mod/more-shield-variants)_ and _[More Extra Shield Variants](https://modrinth.com/mod/more-extra-shield-variants)_<sup> </sup>/ _[Extra Shields](https://modrinth.com/mod/extra-shields)_ installed
 
 ---
+<a name="1.4.5"></a>
 ### 1.4.5:
 - `1.21.4⁺`: Add compatibility with [More Bookshelf Variants 1.0.7 + 1.21.5](https://modrinth.com/mod/more-bookshelf-variants-lieonlion/version/1.0.7+1.21.5-Fabric)
 
 ---
+<a name="1.4.4"></a>
 ### 1.4.4:
 - `1.21.4⁺`: Add _**Pale Oak** Stick_ to tag that a.o. allows for usage in the recipe that converts Stick variants to vanilla Sticks
 
 ---
+<a name="1.4.3"></a>
 ### 1.4.3:
 - `1.21.5`: Add compatibility with [Nemo's Campfires 1.3.1-1.21.5](https://modrinth.com/mod/nemos-campfires/version/1.21.5-1.3.1) (only the 1.21.5 version is affected)
 
 ---
+<a name="1.4.2"></a>
 ### 1.4.2:
 - `1.21.5`: Update to 1.21.5
 - `1.21.4⁺`: Add _**Pale Oak** Stick_ to items that can be used as fuel when Quad is installed
 
 ---
+<a name="1.4.1"></a>
 ### 1.4.1:
 - Fix visual bug turning [More Bed Variants](https://modrinth.com/mod/more-bed-variants)' items invisible
 
 ---
+<a name="1.4.0"></a>
 ## 1.4.0: 
 Villagers now **buy and sell** item **variants** from all installed MStV+ mods. Their trades adapt to their **Village Type**, meaning:  
 - A ***Savanna* Villager** sells an ***Acacia* Bow**¹ instead of an Oak Bow.  
@@ -129,28 +139,33 @@ When MStV+ mods are installed, villagers **replace** Vanilla/Oak trades with bio
 ¹: The Cartographer is a well-traveled Villager and as such can sell any Item Frame variant where the respective *local* variant only has a slightly higher chance to appear.
 
 ---
+<a name="1.3.7"></a>
 ### 1.3.7:
 - Fix several broken recipe groups involving sticks, such as banners, signs, pickaxes, crossbows and others
 - `1.21.4`: Add Pale Oak Leaves to the built-in compatibility datapack making them drop Pale Oak sticks again when using mods that are affected
 
 ---
+<a name="1.3.6"></a>
 ### 1.3.6:
 - `1.20.1`: Fix leaves not dropping sticks/saplings due to a problem with the built-in datapack from `1.3.5`
 - Add Stick variants to the Fabric conventional Item Tag `#c:rods/wooden` allowing for easier intercompatibility with other mods
 - General clean-up and better compression significantly reducing file size by over 25% or over 40KB
 
 ---
+<a name="1.3.5"></a>
 ### 1.3.5:
 - Implement new built-in datapack that prevents some mods from breaking the leaves stick drop loot tables
 - Fix [More Grindstone Variants](https://www.modrinth.com/mod/More-Grindstone-Variants) recipe for the vanilla _(**Dark Oak** Stone) Grindstone_ resulting in a _**Dark Oak** Sandstone Grindstone_
 
 ---
+<a name="1.3.4"></a>
 ### 1.3.4:
 - Implement all potentially relevant resource conditions to crafting recipes (for better/easier intercompatibility with my own and other mods)
 - Add Neoforge resource conditions to Fabric resource conditions (fixing many crafting related issues being encountered when using Synitra or similar)
 - Internal changes required by new mod [More Rail Variants (MStV+)](https://modrinth.com/project/more-rail-variants/)
 
 ---
+<a name="1.3.3"></a>
 ### 1.3.2:
 - `1.21.4`: Fix **_Pale Oak Stick_** crafting recipe
 
@@ -161,6 +176,7 @@ When MStV+ mods are installed, villagers **replace** Vanilla/Oak trades with bio
 - Internal changes required by [More Torch Variants 1.0.7](https://modrinth.com/mod/more-torch-variants/versions)
 
 ---
+<a name="1.3.0"></a>
 ## 1.3.0:
 - `1.21.4`: Update to 1.21.4
 - `1.21.3⁺`: Add _**Pale Oak** Stick_ (necessary for newly added _**Pale Oak** Armor Stand_ in [More Armor Stand Variants <sup>`1.2.0`</sup>](https://modrinth.com/mod/more-armor-stand-variants/version/hFoMkuS7) and _**Pale Oak** (Glow) Item Frame/Painting_ in [More Frame Variants <sup>`1.2.0`</sup>](https://modrinth.com/mod/more-frame-variants/version/ZgRK3XlW)).
@@ -171,46 +187,56 @@ These features namely include:
     > - Pale Oak Fence/Fence Gate/Sign are now crafted exclusively using the _**Pale Oak** Stick_ instead of the vanilla Stick item.
 
 ---
+<a name="1.2.3"></a>
 ### 1.2.3:
 - `1.20.6⁺`: Fix a few Vanilla/Oak Variant recipes not unlocking properly
 - `1.21.3`: Fix compatibility recipes for [More Grindstone Variants](https://modrinth.com/mod/more-grindstone-variants) and [Nemo's Campfires](https://modrinth.com/mod/nemos-campfires)
 
 ---
+<a name="1.2.2"></a>
 ### 1.2.2:
 - `1.21.2`, `1.21.3`: Update to 1.21.2, 1.21.3
 - `1.20.1`, `1.20.4`: Fix some compatibility recipes not working on these versions
 
 ---
+<a name="1.2.1"></a>
 ### 1.2.1:
 - Add _fuel_ functionality to sticks when [Quad](https://www.modrinth.com/mod/quad) is installed
 
 ---
+<a name="1.2.0"></a>
 ## 1.2.0:
 - Add Stick Variants to _Leaves block_ loot tables so that breaking leaves blocks now drop their respective stick instead of the regular Oak Stick (e.g. Birch Leaves now drop Birch Sticks)
 - Add compatibility for [Nemo's Campfires](https://modrinth.com/mod/nemos-campfires/)
 
 ---
+<a name="1.1.2"></a>
 ### 1.1.2:
 - Add compatibility for [Nemo's More Ladder Variants](https://modrinth.com/mod/nemos-more-ladder-variants)
 
 ---
+<a name="1.1.1"></a>
 ### 1.1.1:
 - Add _**Spruce** Sticks_ to the relevant tags for them to be usable in all Stick recipes like all other Stick Variants
 
 ---
+<a name="1.1.0"></a>
 ## 1.1.0:
 - `1.20.1`, `1.20.4`: Correct Java version from 21 to 17
 - Implement compatibility with [Quad](https://modrinth.com/mod/quad), fixing the recipes for _Activator Rail_, _Brush_, _Crossbow_, _Powered Rail_, _Rail_ and _Tripwire Hook_ to be able be crafted with all Stick variants, also when [Quad](https://modrinth.com/mod/quad) installed
 
 ---
+<a name="1.0.4"></a>
 ### 1.0.4:
 - Increase Stick variant recipe result amount from 2 to 4
 
 ---
+<a name="1.0.3"></a>
 ### 1.0.3:
 - Increase Stick variant recipe result amount from 1 to 2
 
 ---
+<a name="1.0.2"></a>
 ### 1.0.2:
 - Fix Stick variant item model being different from the vanilla Stick model
 
