@@ -2,7 +2,7 @@
 # <img width='32' align=right src="./src/main/resources/icon.png"> <p align="center">More Stick Variants</p>
 > <img align=left src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png">
 >
->  A mod adding wood variants for Minecraft's Stick Item as a base for many other mods requiring these sticks. <p align="right"><sub>Available on:&nbsp;&nbsp;&nbsp;&nbsp;</sub></p><a href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants"><img alt="curseforge" align=right height="32" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_64h.png"></a><a href="https://www.modrinth.com/mod/more-stick-variants"><img alt="modrinth" align=right height="32" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_64h.png"></a>
+>  A mod adding wood variants for Minecraft's Stick Item as a base for many other mods requiring these sticks. <p align="right"><sub>Available on:&nbsp;&nbsp;&nbsp;&nbsp;</sub></p><a href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants"><img alt="curseforge" align=right height="32" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_vector.svg"></a><a href="https://www.modrinth.com/mod/more-stick-variants"><img alt="modrinth" align=right height="32" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_vector.svg"></a>
 >  <details><summary><h6>Show in-game example image</h6></summary><br><img src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/mr_mini_banner.gif"><sup><!--CAPTION:PLACEHOLDER--></sup></details>  
 <br>
 
