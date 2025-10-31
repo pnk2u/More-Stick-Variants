@@ -2,19 +2,17 @@
 # <img width='32' align=right src="./src/main/resources/icon.png"> <p align="center">More Stick Variants</p>
 > <img align=left src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png">
 >
->  &nbsp;
->  <details><summary><h6>Show in-game example image</h6></summary><img src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/mr_mini_banner.gif"><sup><!--CAPTION:PLACEHOLDER--></sup></details>
-
-
-
 >  A mod adding wood variants for Minecraft's Stick Item as a base for many other mods requiring these sticks. <p align="right"><sub>Available on:&nbsp;&nbsp;&nbsp;&nbsp;</sub></p><a href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants"><img alt="curseforge" align=right height="32" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_64h.png"></a><a href="https://www.modrinth.com/mod/more-stick-variants"><img alt="modrinth" align=right height="32" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_64h.png"></a>
+>  <details><summary><h6>Show in-game example image</h6></summary><br><img src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/mr_mini_banner.gif"><sup><!--CAPTION:PLACEHOLDER--></sup></details>  
+<br>
 
 <a name="compatibility"></a>
 ### 🧩︎ Compatibility
 
 - Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.10`
 - Mod Loader: _Fabric_
-- Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api)
+- Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api)  
+<br>
 
 <a name="translations"></a>
 ### 🌐︎ Translations
@@ -24,7 +22,9 @@ Currently available in:
 - German
 - Ukrainian (@[StarmanMine142](/../../../../StarmanMine142) with [PR #6](../../pull/6)/[7](../../pull/7), added in [`1.3.1`](#1.3.1))
 
-Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1)`)**.
+> Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1)`)**.
+
+<br>
 
 <a name="changelog-history"></a>
 ## 🗐︎ <ins>Changelog History</ins>:
