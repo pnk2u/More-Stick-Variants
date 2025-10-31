@@ -23,7 +23,8 @@ Currently available in:
 - German
 - Ukrainian (@[StarmanMine142](/../../../../StarmanMine142) with [PR #6](../../pull/6)/[7](../../pull/7), added in [`1.3.1`](#1.3.1))
 
-> Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1)`)**.
+> Want to help translate? If you can, please open a PR to the **default branch** [`1.21(.1)`](../../tree/1.21(.1)).  
+> Otherwise simply send your translation via email (contact@pnku.de) or join the [Discord](https://discord.lieonlion.dev).
 
 <br>
 
