@@ -9,7 +9,7 @@
 - Mod Loader: _Fabric_
 - Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api)
 
-### ᴬ⃯ ᵦ⃔ Translations
+### 🌐︎ Translations
 
 Currently available in:
 - English
