@@ -9,9 +9,10 @@
 <a name="compatibility"></a>
 ### 🧩︎ Compatibility
 
-- Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.10`
-- Mod Loader: _Fabric_
-- Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api)  
+| Minecraft | [`1.20.1`](https://modrinth.com/mod/more-stick-variants/versions?g=1.20.1), [`1.21(.1)`](https://modrinth.com/mod/more-stick-variants/versions?g=1.21&g=1.21.1), [`1.21.4`~`1.21.10`](https://modrinth.com/mod/more-stick-variants/versions?g=1.21.4&g=1.21.5&g=1.21.6&g=1.21.7&g=1.21.8&g=1.21.9&g=1.21.10) |
+|:---|:---|
+| **Mod Loaders** |   [Fabric](https://fabricmc.net/use/installer/) |
+| **Requires** | [`Fabric API`](https://modrinth.com/mod/fabric-api) |
 <br>
 
 <a name="translations"></a>
