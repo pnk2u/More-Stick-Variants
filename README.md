@@ -1,27 +1,38 @@
-# <img width='24' src="./src/main/resources/icon.png"> More Stick Variants
-> ![Mod Icon](https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png)
+<a name="more-stick-variants"></a>
+# <img width='32' align=right src="./src/main/resources/icon.png"> <p align="center">More Stick Variants</p>
+> <img align=left src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png">
 >
-> A mod adding wood variants for Minecraft's Stick Item as a base for many other mods requiring these sticks.
+>  &nbsp;  
+> A mod adding wood variants for Minecraft's Stick Item as a base for many other mods requiring these sticks.  
+>  &nbsp;
+>  <details><summary><h6>Show in-game example image</h6></summary><img src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/mr_mini_banner.gif"><sup><!--CAPTION:PLACEHOLDER--></sup></details>
 
-### Compatibility
+
+
+
+<a name="compatibility"></a>
+### 🧩︎ Compatibility
 
 - Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.10`
 - Mod Loader: _Fabric_
 - Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api)
 
+<a name="translations"></a>
 ### 🌐︎ Translations
 
 Currently available in:
 - English
 - German
-- Ukrainian (@[StarmanMine142](/../../../../StarmanMine142) with [PR #6](../../pull/6)/[7](../../pull/7), added in [`1.3.1`](/../../#131))
+- Ukrainian (@[StarmanMine142](/../../../../StarmanMine142) with [PR #6](../../pull/6)/[7](../../pull/7), added in [`1.3.1`](#1.3.1))
 
 Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1)`)**.
 
-### Changelog History
+<a name="changelog-history"></a>
+## 🗐︎ <ins>Changelog History</ins>:
 
 <!--CHANGELOG:START-->
-### 1.4.10:
+<a name="1.4.10"></a>
+### [1.4.10](https://modrinth.com/mod/more-stick-variants/version/lrRzuKvg):
 - Fix crash on startup introduced in `1.4.9` due to a bug in a newer Loom version used for compiling
 
 ---
@@ -142,6 +153,7 @@ When MStV+ mods are installed, villagers **replace** Vanilla/Oak trades with bio
 - `1.21.4`: Fix **_Pale Oak Stick_** crafting recipe
 
 ---
+<a name="1.3.1"></a>
 ### 1.3.1:
 - Add Ukrainian Translation (by [Starman](https://modrinth.com/user/StarmanMine142))
 - Internal changes required by [More Torch Variants 1.0.7](https://modrinth.com/mod/more-torch-variants/versions)
