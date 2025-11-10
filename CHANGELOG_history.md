@@ -1,9 +1,15 @@
 <a name="1.4.10"></a>
 ### 1.4.10:
 - Fix crash on startup introduced in `1.4.9` due to a bug in a newer Loom version used for compiling
-  <sub><p align="center"><a title="Download (Modrinth): More Stick Variants - 1.4.10 + 1.21(.1)" href="https://modrinth.com/mod/more-stick-variants/version/lrRzuKvg"><img alt="Download on Modrinth: More Stick Variants - 1.4.10 + 1.21(.1)" height="26" width="26" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_vector.svg"></a><sup>&thinsp;&#x20;&#x8ce;&nbsp;&#x200a;&#x200a;&#x200a;&#x200a;</sup><a title="Download (Curseforge): More Stick Variants - 1.4.10 + 1.21(.1)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7167829"><img alt="Download on Curseforge: More Stick Variants - 1.4.10 + 1.21(.1)"  height="26" width="26" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_vector.svg"></a>&thinsp;&#x200a;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></sub>
 
----
+<h2><sub><sub><sup><ins>Download 1.4.10 + 1.21(.1)</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Stick Variants 1.4.10 + 1.21(.1)" href="https://modrinth.com/mod/more-stick-variants/version/4TaX2Tva">
+<img width=26 src="https://img.shields.io/badge/-%20-%230f91?style=flat&logo=modrinth"></a>
+<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<a title="Download (Curseforge):&#10;More Stick Variants 1.4.10 + 1.21(.1)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7168418">
+<img width=26 src="https://img.shields.io/badge/--%23f062?style=flat&logo=curseforge"></a>
+  </sub></sub></h2>
+
 <a name="1.4.9"></a>
 ### 1.4.9:
 - Fix crash when used with [More Bed Variants](https://www.modrinth.com/mod/more-bed-variants) `2.1.0⁺`
