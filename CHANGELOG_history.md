@@ -1,3 +1,15 @@
+<a name="1.4.11"></a>
+### 1.4.11:
+- `1.21.5(-11)`: Update to <ins>1.21.11</ins>
+
+<h2><sub><sub><sup><ins>Download 1.4.11 + 1.21.5(-11)</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Stick Variants 1.4.11 + 1.21.5(-11)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/yKwoTaT7">
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
+<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<a title="Download (Curseforge):&#10;More Stick Variants 1.4.11 + 1.21.5(-11)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7252250">
+<img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
+</sub></sub></h2>
+
 <a name="1.4.10"></a>
 ### 1.4.10:
 - Fix crash on startup introduced in `1.4.9` due to a bug in a newer Loom version used for compiling
