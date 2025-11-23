@@ -6,8 +6,9 @@ import de.pnku.mstv_base.MoreStickVariants;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
-import net.minecraft.world.entity.npc.*;
+import net.minecraft.world.entity.npc.villager.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -135,7 +136,7 @@ public abstract class AbstractVillagerMixin {
 
 
     @Inject(method = "addOffersFromItemListings", at = @At("TAIL"))
-    protected void injectedAddOffersFromItemListingsAtTail(MerchantOffers givenMerchantOffers, VillagerTrades.ItemListing[] newTrades, int maxNumbers, CallbackInfo ci) {
+    protected void injectedAddOffersFromItemListingsAtTail(ServerLevel serverLevel, MerchantOffers givenMerchantOffers, VillagerTrades.ItemListing[] itemListings, int i, CallbackInfo ci) {
         if (abstractVillager instanceof Villager villager) {
             VillagerData vData = villager.getVillagerData();
             Item tableBasedStick;
