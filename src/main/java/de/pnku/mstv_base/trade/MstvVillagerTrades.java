@@ -4,9 +4,9 @@ import de.pnku.shields_mxsv.item.MoreExtraShieldVariantItems;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.entity.npc.VillagerType;
+import net.minecraft.world.entity.npc.villager.VillagerProfession;
+import net.minecraft.world.entity.npc.villager.VillagerTrades;
+import net.minecraft.world.entity.npc.villager.VillagerType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.devnemo.nemos.campfires.world.item.NemosCampfiresItems.*;
+import static com.nemonotfound.nemos.campfires.world.item.NemosCampfiresItems.*;
 import static de.pnku.lolmsv.item.MoreShieldVariantItems.*;
 import static de.pnku.mbdv.init.MbdvItemInit.*;
 import static de.pnku.mft.init.MftBlockInit.*;
@@ -28,8 +28,8 @@ import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.*;
 import static de.pnku.mstv_mweaponv.item.MoreWeaponVariantItems.*;
 import static de.pnku.mstv_mtoolv.item.MoreToolVariantItems.*;
 import static dev.lieonlion.lolmbv.init.MbvItemInit.*;
-import static net.minecraft.world.entity.npc.VillagerType.*;
-import static net.minecraft.world.entity.npc.VillagerProfession.*;
+import static net.minecraft.world.entity.npc.villager.VillagerType.*;
+import static net.minecraft.world.entity.npc.villager.VillagerProfession.*;
 import static net.minecraft.world.item.Items.*;
 
 

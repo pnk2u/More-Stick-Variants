@@ -142,9 +142,9 @@ dependencies {
 
 	// MStV+ Villager Trades (Testing)
 	/**/
-	modLocalRuntime "maven.modrinth:more-weapon-variants:${project.mweaponv_version_id}"
+	//modLocalRuntime "maven.modrinth:more-weapon-variants:${project.mweaponv_version_id}"
 	modLocalRuntime "maven.modrinth:more-tool-variants:${project.mtoolv_version_id}"
-	modLocalRuntime "maven.modrinth:more-frame-variants:${project.mframev_version_id}"
+	//modLocalRuntime "maven.modrinth:more-frame-variants:${project.mframev_version_id}"
 	modLocalRuntime "maven.modrinth:more-fishing-rod-variants:${project.mfrodv_version_id}"
 		// nemosCampfireV
 		modLocalRuntime "maven.modrinth:nemos-campfires:${project.nemoscampfirev_version_id}"
@@ -153,10 +153,10 @@ dependencies {
 		// More Shield Variants
 		modLocalRuntime "maven.modrinth:more-shield-variants:${project.mshieldv_version_id}"
 		// More Bed Variants
-		modLocalRuntime "maven.modrinth:more-bed-variants:${project.mbedv_version_id}"
+		//modLocalRuntime "maven.modrinth:more-bed-variants:${project.mbedv_version_id}"
 		// More Bookshelf Variants
-		modLocalRuntime "maven.modrinth:more-bookshelf-variants-lieonlion:${project.mbookshelfv_version_id}"
-		modLocalRuntime "maven.modrinth:quad:${project.quad_version_id}"
+		//modLocalRuntime "maven.modrinth:more-bookshelf-variants-lieonlion:${project.mbookshelfv_version_id}"
+		//modLocalRuntime "maven.modrinth:quad:${project.quad_version_id}"
 
 }
 
