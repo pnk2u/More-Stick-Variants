@@ -32,6 +32,19 @@
       </td>
     </tr>
   </thead>
+  <tbody>
+    <td><strong>Required by</strong></td>
+    <td> <!-- mArmorStandV, mFrameV, nemosMLadderV, mRailV, mFishingRodV, mToolV, mTorchV, mWeaponV -->
+      <a href="https://modrinth.com/mod/more-armor-stand-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Armor-Stand-Variants/pres/logo/logo_c.png"></sub><code>More Armor Stand Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-frame-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Frame-Variants/pres/logo/logo_c.png"></sub><code>More Item Frame Variants</code></a><br>
+      <a href="https://modrinth.com/mod/nemos-more-ladder-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/Nemos-More-Ladder-Variants/pres/logo/logo_c.png"></sub><code>Nemoʼs More Ladder Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-rail-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Rail-Variants/pres/logo/logo_c.png"></sub><code>More Rail Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-fishing-rod-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo_c.png"></sub><code>More Fishing Rod Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-tool-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tool-Variants/pres/logo/logo_c.png"></sub><code>More Tool Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-torch-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Torch-Variants/pres/logo/logo_c.png"></sub><code>More Torch Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-weapon-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo_c.png"></sub><code>More Weapon Variants</code></a>
+    </td>
+  </tbody>
 </table>
 <br>
 
@@ -55,15 +68,15 @@ Currently available in:
 ### Versions
 <a name="most-recent-version"></a>
 <!--CHANGELOG:START-->
-<a name="1.4.11"></a>
-#### 1.4.11[*](#footnote-*):
-- `1.21.5(-11)`: Update to <ins>1.21.11</ins>
+<a name="1.4.12"></a>
+#### 1.4.12[*](#footnote-*):
+- `1.21.5(-10)`, `1.21.11`: Separate versions for `1.21.5(-10)` and `1.21.11` due to changes in <ins>1.21.11</ins> that break compatibility with older versions
 
-<h2><sub><sub><sup><ins>Download 1.4.11 + 1.21.5(-11)</ins>:</sup>&#x200A;
-<a title="Download (Modrinth):&#10;More Stick Variants 1.4.11 + 1.21.5(-11)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/yKwoTaT7">
+<h2><sub><sub><sup><ins>Download 1.4.12 + 1.21.5(-10)</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Stick Variants 1.4.12 + 1.21.5(-10)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/SRDMtKq1">
 <img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
 <sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
-<a title="Download (Curseforge):&#10;More Stick Variants 1.4.11 + 1.21.5(-11)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7252250">
+<a title="Download (Curseforge):&#10;More Stick Variants 1.4.12 + 1.21.5(-10)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7253816">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
 
