@@ -32,6 +32,19 @@
       </td>
     </tr>
   </thead>
+  <tbody>
+    <td><strong>Required by</strong></td>
+    <td> <!-- mArmorStandV, mFrameV, nemosMLadderV, mRailV, mFishingRodV, mToolV, mTorchV, mWeaponV -->
+      <a href="https://modrinth.com/mod/more-armor-stand-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Armor-Stand-Variants/pres/logo/logo_c.png"></sub><code>More Armor Stand Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-frame-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Frame-Variants/pres/logo/logo_c.png"></sub><code>More Item Frame Variants</code></a><br>
+      <a href="https://modrinth.com/mod/nemos-more-ladder-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/Nemos-More-Ladder-Variants/pres/logo/logo_c.png"></sub><code>Nemoʼs More Ladder Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-rail-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Rail-Variants/pres/logo/logo_c.png"></sub><code>More Rail Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-fishing-rod-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo_c.png"></sub><code>More Fishing Rod Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-tool-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tool-Variants/pres/logo/logo_c.png"></sub><code>More Tool Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-torch-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Torch-Variants/pres/logo/logo_c.png"></sub><code>More Torch Variants</code></a><br>
+      <a href="https://modrinth.com/mod/more-weapon-variants"><sub><img width="16" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo_c.png"></sub><code>More Weapon Variants</code></a>
+    </td>
+  </tbody>
 </table>
 <br>
 
