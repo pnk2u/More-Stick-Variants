@@ -39,6 +39,46 @@ loom {
 fabricApi {
 }
 
+static List<Integer> previousMcVersion(int major, int minor, int patch) {
+    def maxForMajor = { int m ->
+        if (m == 1) {
+            return [21, 11] // 1.21.11 is the ceiling for major=1
+        }
+        if (m >= 26) {
+            return [52, 52] // 52 for <53 calendar weeks in a year
+        }
+        return [21, 11]
+    }
+
+    if (major > 1 && (major < 26 || major == 26 && minor == 1 && patch == 0)) {
+        return [1, 21, 11]
+    }
+
+    if (patch > 0) {
+        return [major, minor, patch - 1]
+    }
+
+    // patch == 0: move to previous minor
+    if (minor > 0) {
+        def (_, maxPatch) = maxForMajor(major)
+        return [major, minor - 1, maxPatch]
+    }
+
+    // minor == 0 and patch == 0: move to previous major
+    if (major <= 1) {
+        return [1, 0, 0]
+    }
+
+    int newMajor = major - 1
+    if (newMajor > 1 && newMajor < 26) {
+        // Skip 2..25 and go directly to 1.21.11
+        return [1, 21, 11]
+    }
+
+    def (maxMinor, maxPatch) = maxForMajor(newMajor)
+    return [newMajor, maxMinor, maxPatch]
+}
+
 def getReleaseVersion(minecraftVersion) {
     // Truncate version after first non-integer/dot
     def releaseVersion = minecraftVersion.replaceAll(/[^0-9.].*/, '')
@@ -88,25 +128,55 @@ def getParchmentWithDecrementedMC(minecraftVersion) {
     def versionParts = releaseVersion.toString().split('\\.') as List
     if (versionParts.size() == 2) versionParts << "0"
     if (versionParts.size() < 2 || versionParts.size() > 3) throw new GradleException("Invalid Minecraft version format: $minecraftVersion")
-    def (major, minor, patch) = versionParts.collect {it as Integer}
-    def decrementedVersion = patch < 1 ? "$major.${minor - 1}.99" : "$major.$minor.${patch - 1}"
+    def (rMaj, rMin, rPat) = versionParts.collect {it as Integer}
+    def (int dMaj, int dMin, int dPat) = previousMcVersion(rMaj, rMin, rPat)
+    def decrementedVersion = "${dMaj}.${dMin}.${dPat}"
 
-    while (!releases["$major.$minor.$patch"] && !(patch == 0 && releases["$major.$minor"])) {
-        if (patch > 0) {
-            patch--
-        } else {
-            if (minor == 0) break
-            minor--
-            patch = 99
+    def allVersions = releases.keySet().collect { String key ->
+        def parts = key.split('\\.')
+        if (parts.length == 2) {
+            parts = [parts[0], parts[1], "0"]
+        } else if (parts.length != 3) {
+            throw new GradleException("Unexpected Parchment MC version format in releases: ${key}")
+        }
+        def maj = parts[0] as int
+        def min = parts[1] as int
+        def pat = parts[2] as int
+        [major: maj, minor: min, patch: pat, key: key]
+    }.sort { a, b ->
+        if (a.major != b.major) return a.major <=> b.major
+        if (a.minor != b.minor) return a.minor <=> b.minor
+        return a.patch <=> b.patch
+    }
+
+    if (allVersions.isEmpty()) {
+        throw new GradleException("Unable to find any Parchment versions from releases.")
+    } else if(logger.isEnabled(LogLevel.INFO)) {
+        println("All Parchment versions found in ${url}:")
+        allVersions.each { v ->
+            println("  - ${v.key}")
         }
     }
-    def foundVersion = patch == 0 && releases["$major.$minor"] ? "$major.$minor" : "$major.$minor.$patch"
-    if (releases[foundVersion]) {
-        def parchmentDate = releases[foundVersion]
-        logger.print("Parchment: " + foundVersion + " + " + parchmentDate as String + "\n")
-        return [decrementedVersion, foundVersion, parchmentDate]
+
+    def found = null
+    for (int i = allVersions.size() - 1; i >= 0; i--) {
+        def v = allVersions[i]
+        if (v.major < rMaj ||
+                (v.major == rMaj && v.minor < rMin) ||
+                (v.major == rMaj && v.minor == rMin && v.patch <= rPat)) {
+            found = v
+            break
+        }
     }
-    throw new GradleException("No valid Parchment version found for $minecraftVersion or earlier.")
+
+    if (found == null) {
+        throw new GradleException("No valid Parchment version found for $minecraftVersion or earlier.")
+    }
+
+    def parchmentKey = found.key
+    def parchmentDate = releases[parchmentKey]
+    logger.print("Parchment: " + parchmentKey + " + " + parchmentDate as String + "\n")
+    return [decrementedVersion, parchmentKey, parchmentDate]
 }
 
 def (fabric_loader_version, fabric_api_version) = getLatestFabric(releaseVersion)
@@ -176,33 +246,41 @@ def minecraft_version_0() {
 
 def minecraft_version_1() {
     String key = 'minecraft_version_upper'
-    if (project.hasProperty(key)) {String value = project.getProperties().get(key); return !value.isEmpty() ? value : "2.0.0"}
-    else {return "2.0.0"} // Effectively no upper bound
+    if (project.hasProperty(key)) {String value = project.getProperties().get(key); return !value.isEmpty() ? value : "99.0.0"}
+    else {return "99.0.0"} // Effectively no upper bound
 }
 
+def getJavaVersionNum() {if (project.minecraft_version.startsWith("1.20")) return 17 else if (project.minecraft_version.startsWith("1.21")) return 21 else return 25}
+var java_version = getJavaVersionNum()
+def getJavaVersionEnum() {if (project.minecraft_version.startsWith("1.20")) return JavaVersion.VERSION_17 else if (project.minecraft_version.startsWith("1.21")) return JavaVersion.VERSION_21 else return JavaVersion.VERSION_25}
+var java_version_enum = getJavaVersionEnum()
+
 processResources {
-    // Disregard Patch version from Fabric Loader for dependency
-    var fabric_loader_version_0 = "${fabric_loader_version}".replaceFirst(/\.[^.]*$/, '.0')
+    var fabric_loader_version_0 = version_reduced(fabric_loader_version)
 
     var replaceProperties = [
             loader_version: fabric_loader_version_0, mod_id: mod_id, mod_name: mod_name,
             mod_license: mod_license, mod_version: mod_version, mod_description: mod_description,
-            minecraft_version: minecraft_version, minecraft_version_0: minecraft_version_0(), minecraft_version_1: minecraft_version_1()
+            minecraft_version: minecraft_version, minecraft_version_0: minecraft_version_0(), minecraft_version_1: minecraft_version_1(),
+            java_version: java_version
     ]
-	inputs.properties replaceProperties
+    inputs.properties replaceProperties
 
-	filesMatching("fabric.mod.json") {
-		expand replaceProperties
-	}
+    filesMatching("fabric.mod.json") {
+        expand replaceProperties
+    }
+    filesMatching("*.mixins.json") {
+        expand replaceProperties
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+	it.options.release = java_version
 }
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = java_version_enum
+	targetCompatibility = java_version_enum
 }
 
 jar {
