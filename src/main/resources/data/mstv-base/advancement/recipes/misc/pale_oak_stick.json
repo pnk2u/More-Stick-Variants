@@ -1,13 +1,5 @@
 {
   "parent": "minecraft:recipes/root",
-  "fabric:load_conditions": [
-    {
-      "condition": "fabric:features_enabled",
-      "features": [
-        "winter_drop"
-      ]
-    }
-  ],
   "criteria": {
     "has_planks": {
       "conditions": {
