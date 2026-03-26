@@ -68,15 +68,26 @@ Currently available in:
 ### Versions
 <a name="most-recent-version"></a>
 <!--CHANGELOG:START-->
-<a name="1.4.13"></a>
-#### 1.4.13[*](#footnote-*):
-- `1.21.4`, `1.21.5(-10)`, `1.21.11`: Fix stick-based crafting recipe for _**Pale Oak** Stone Grindstone_ (from <ins>More Grindstone Variants</ins> (&#x200A;<sub><a title="More Grindstone Variants&#10;on Modrinth" href="https://modrinth.com/mod/more-grindstone-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a></sub><!--SEPARATOR_V--><img width=5 height=8 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"><sub><a title="More Grindstone Variants&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-grindstone-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)) resulting in a regular _**Dark Oak** Stone Grindstone_ (vanilla variant)
+<a name="1.4.14"></a>
+#### 1.4.14[*](#footnote-*):
+- `26.1`: 
+  - Update to <ins>26.1</ins>
+  - Changes to _Fletcher Villager_'s _Stick_ variant trades:
+    - _Stick_ trades based on the _Fletching Table_ variant now require only 16 _Sticks_ instead of 24 per _Emerald_
+    - _Stick_ trades randomized from the pool of non-local _Sticks_ stay at 24 _Sticks_ per _Emerald_ 
+    > _**Note**_: Internally the other trades added in `1.4.14` will from `26.1` on mostly be handled by the individual **MStV+** mods, 
+  but you shouldn't notice this too much as the trades will get added to the respective mods together with their updates to <ins>26.1</ins>.
+- `1.21.4+`: Fix _**Pale Oak** Stick_ recipe unlock by obtaining _**Pale Oak** Planks_ (previously only by crafting the _Stick_ itself)
 
-<h2><sub><sub><sup><ins>Download 1.4.13 + 1.21.11</ins>:</sup>&#x200A;
-<a title="Download (Modrinth):&#10;More Stick Variants 1.4.13 + 1.21.11" href="https://www.modrinth.com/mod/ZVv4e6pP/version/FrycFrhb">
+<br></br>
+<sub>License update to [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (previously [MIT](https://opensource.org/licenses/MIT))</sub>
+
+
+<h2><sub><sub><sup><ins>Download 1.4.14 + 1.21.11</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Stick Variants 1.4.14 + 1.21.11" href="https://www.modrinth.com/mod/ZVv4e6pP/version/SctdPd3L">
 <img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
 <sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
-<a title="Download (Curseforge):&#10;1.4.13 + 1.21.11 - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7323989">
+<a title="Download (Curseforge):&#10;1.4.14 + 1.21.11 - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7819001">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
 
