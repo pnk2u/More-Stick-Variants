@@ -1,6 +1,7 @@
 {
   "pack": {
-    "pack_format": 61,
-    "description": "Leave my leaves (loot tables) alone. (Makes all leaves drop their appropriate sticks even when other mods interfere.)"
+    "description": "Leave my leaves (loot tables) alone. (Makes all leaves drop their appropriate sticks even when other mods interfere.)",
+    "min_format": 100,
+    "max_format": 101
   }
 }

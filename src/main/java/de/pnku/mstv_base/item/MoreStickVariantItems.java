@@ -1,6 +1,6 @@
 package de.pnku.mstv_base.item;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.*;
 import net.minecraft.core.Registry;
@@ -43,7 +43,7 @@ public class MoreStickVariantItems {
     private static void registerStickItem(Item stickItem, Item stickAfter) {
         String stickName = ((MoreStickVariantItem) stickItem).mstvWoodType + "_stick";
         Registry.register(BuiltInRegistries.ITEM, MoreStickVariants.withModId(stickName), stickItem);
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(entries -> entries.addAfter(stickAfter, stickItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(entries -> entries.insertAfter(stickAfter, stickItem));
         more_sticks.add(stickItem);
     }
     
