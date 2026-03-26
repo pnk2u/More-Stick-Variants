@@ -1,0 +1,42 @@
+{
+  "merchant_predicate": {
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "mstv-base:villager_job_site_block",
+        "id": "minecraft:fletching_table"
+      },
+      {
+        "condition": "minecraft:any_of",
+        "terms": [
+          {
+            "condition": "mstv-base:villager_job_site_block",
+            "id": "#mstv-base:fletching_table_variants"
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "predicates": {
+                "minecraft:villager/variant": [
+                  "minecraft:plains"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 12.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 16.0,
+    "id": "mstv-base:birch_stick"
+  },
+  "xp": 1.0
+}
+

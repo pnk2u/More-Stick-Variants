@@ -1,0 +1,14 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:fletcher/1/emerald_arrow",
+    "minecraft:fletcher/1/gravel_and_emerald_flint",
+    "#mstv-base:fletcher/local_stick_emerald",
+    "#mstv-base:fletcher/favorite_stick_emerald",
+    "#mstv-base:fletcher/foreign_stick_emerald",
+    {
+      "id": "#mstv-mweaponv:fletcher/emerald_arrow",
+      "required": false
+    }
+  ]
+}

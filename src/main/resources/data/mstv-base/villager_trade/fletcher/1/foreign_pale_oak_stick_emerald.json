@@ -1,0 +1,17 @@
+{
+  "merchant_predicate": {
+    "condition": "mstv-base:villager_missing_trades",
+    "items": ["mstv-base:pale_oak_stick", {"id": "#mstv-base:sticks", "count": 24.0}]
+  },
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 16.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 24.0,
+    "id": "mstv-base:pale_oak_stick"
+  },
+  "xp": 2.0
+}
+

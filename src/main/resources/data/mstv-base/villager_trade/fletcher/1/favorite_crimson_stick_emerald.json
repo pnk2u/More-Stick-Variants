@@ -1,0 +1,17 @@
+{
+  "merchant_predicate": {
+    "condition": "mstv-base:villager_job_site_block",
+    "id": "lolmft:crimson_fletching_table"
+  },
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 12.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 16.0,
+    "id": "mstv-base:crimson_stick"
+  },
+  "xp": 1.0
+}
+

@@ -21,9 +21,6 @@
       "de.pnku.mstv_base.MoreStickVariants"
     ]
   },
-  "mixins": [
-    "mstv-base.trade.mixins.json"
-  ],
   "accessWidener": "mstv-base.accesswidener",
   "depends": {
 		"fabricloader": ">=${loader_version}",
