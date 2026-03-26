@@ -2,6 +2,10 @@ name: publish
 
 on:
   push:
+    branches:
+      - '**'  # Allow all branches
+    tags-ignore:
+      - '*'   # Ignore all tag pushes
 
 jobs:
   build:
