@@ -1,4 +1,4 @@
-<!--publish=false-->
+<!--publish=true-->
 ### 1.4.15:
 - _Combining Enchantments_:
   - Allow different wood variants of the same _Material_ of _Swords_<sup>[1]</sup>, _Spears_<sup>[1]</sup>, _Pickaxes_<sup>[2]</sup>, _Axes_<sup>[2]</sup>, _Shovels_<sup>[2]</sup>, and _Hoes_<sup>[2]</sup> to combine their enchantments in an _Anvil_
