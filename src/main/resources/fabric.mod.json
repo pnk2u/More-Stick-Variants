@@ -22,6 +22,7 @@
     ]
   },
   "mixins": [
+    "mstv-base.mixins.json",
     "mstv-base.trade.mixins.json"
   ],
   "accessWidener": "mstv-base.accesswidener",
