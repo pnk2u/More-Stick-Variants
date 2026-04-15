@@ -2,10 +2,11 @@ package de.pnku.mstv_base.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.inventory.AnvilMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TieredItem;
+import net.minecraft.world.item.enchantment.Repairable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -20,8 +21,10 @@ public abstract class AnvilMenuMixin {
         if (original.call(firstInputStack, secondInputItem)) return true;
 
         if (isSameToolType(firstInputStack, new ItemStack(secondInputItem))) {
-            if (firstInputStack.getItem() instanceof TieredItem firstTiered && secondInputItem instanceof TieredItem secondTiered) {
-                return firstTiered.getTier() == secondTiered.getTier();
+            Repairable firstRepairable = firstInputStack.get(DataComponents.REPAIRABLE);
+            Repairable secondRepairable = secondInputItem.getDefaultInstance().get(DataComponents.REPAIRABLE);
+            if (firstRepairable != null) {
+                return firstRepairable.equals(secondRepairable);
             }
             return true;
         }
