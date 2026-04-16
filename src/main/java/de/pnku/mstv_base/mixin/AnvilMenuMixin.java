@@ -20,8 +20,9 @@ import static net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags.*;
 
 @Mixin(AnvilMenu.class)
 public abstract class AnvilMenuMixin {
-    @WrapOperation(method = "createResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"))
-    private boolean wrappedCreateResultItemStackIs(ItemStack firstInputStack, Item secondInputItem, Operation<Boolean> original) {
+    @WrapOperation(method = "createResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Ljava/lang/Object;)Z"))
+    private boolean wrappedCreateResultItemStackIs(ItemStack firstInputStack, Object o, Operation<Boolean> original) {
+        Item secondInputItem = (Item) o;
         if (original.call(firstInputStack, secondInputItem)) return true;
 
         if (isSameEnchantabilityType(firstInputStack, new ItemStack(secondInputItem))) {
