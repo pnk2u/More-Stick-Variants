@@ -40,7 +40,7 @@ public abstract class AnvilMenuMixin {
         List <TagKey<Item>> enchantableTags = new ArrayList<>();
         enchantableTags.add(AXES); enchantableTags.add(HOES); enchantableTags.add(PICKAXES); enchantableTags.add(SHOVELS); enchantableTags.add(SWORDS); enchantableTags.add(SPEARS);
         enchantableTags.add(BOW_ENCHANTABLE); enchantableTags.add(CROSSBOW_ENCHANTABLE); enchantableTags.add(FISHING_ENCHANTABLE);
-        enchantableTags.add(SHIELD_TOOLS); enchantableTags.add(SPEAR_TOOLS);
+        enchantableTags.add(SHIELD_TOOLS);
         for (TagKey<Item> tag : enchantableTags) {
             if (stack1.is(tag) && stack2.is(tag)) return true;
         }
