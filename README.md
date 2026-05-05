@@ -69,21 +69,16 @@ Currently available in:
 ### Versions
 <a name="most-recent-version"></a>
 <!--CHANGELOG:START-->
-<a name="1.4.15"></a>
-#### 1.4.15[*](#footnote-*):
-- _Combining Enchantments_:
-  - Allow different wood variants of the same _Material_ of _Swords_<sup>[1]</sup>, _Spears_<sup>[1]</sup>, _Pickaxes_<sup>[2]</sup>, _Axes_<sup>[2]</sup>, _Shovels_<sup>[2]</sup>, and _Hoes_<sup>[2]</sup> to combine their enchantments in an _Anvil_
-  - Allow different wood variants of _Bows_<sup>[1]</sup>, _Crossbows_<sup>[1]</sup>, _Fishing Rods_<sup>[3]</sup> to combine their enchantments in an _Anvil_
-    > Example:    
-![Example image showing an _Anvil_ screen in which an _Acacia Diamond Axe_ and an _Oak Diamond Axe_ are being combined with the tooltips of both input items and the resulting item visible showing the combined enchantments and the wood variant of the first input determining the wood variant of the resulting item](https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/changelogs/1.5.6/combining_enchantments.png)  
-<sup>[1]</sup>: Added by <ins>More Weapon Variants (MStV+)</ins> (&#x200A;<sub><a title="More Weapon Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-weapon-variants"><img width=20 src="https://img.shields.io/badge/-%20-%230f91?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Weapon Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-weapon-variants"><img width=20 src="https://img.shields.io/badge/--%23f062?style=flat&logo=curseforge"></a></sub>&#x200A;)  
-<sup>[2]</sup>: Added by <ins>More Tool Variants (MStV+)</ins> (&#x200A;<sub><a title="More Tool Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Tool Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)  
-<sup>[3]</sup>: Added by <ins>More Fishing Rod Variants (MStV+)</ins> (&#x200A;<sub><a title="More Fishing Rod Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-fishing-rod-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Fishing Rod Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)
+<a name="1.4.16"></a>
+#### 1.4.16[*](#footnote-*):
+- Fix _Stick_ Variants not being usable as _Fuel_  
+  > Requires <ins>Quad</ins> (&#x200A;<sub><a title="Quad&#10;on Modrinth" href="https://modrinth.com/mod/quad/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a></sub><!--SEPARATOR_V:MR--><img width=5 height=8 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"><sub><a title="Quad&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/quad/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;).
 
-<h2><sub><sub><sup><ins>Download 1.4.15 + 1.20.1</ins>:</sup>&#x200A;
-<a title="Download (Modrinth):&#10;More Stick Variants 1.4.15 + 1.20.1" href="https://www.modrinth.com/mod/ZVv4e6pP/version/3cyDWMV8">
+
+<h2><sub><sub><sup><ins>Download 1.4.16 + 1.20.1</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Stick Variants 1.4.16 + 1.20.1" href="https://www.modrinth.com/mod/ZVv4e6pP/version/pHTOgXFn">
 <img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
-<a title="Download (Curseforge):&#10;1.4.15 + 1.20.1 - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7933257">
+<a title="Download (Curseforge):&#10;1.4.16 + 1.20.1 - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/8045171">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
 
