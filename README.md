@@ -80,10 +80,10 @@ Currently available in:
 <sup>[2]</sup>: Added by <ins>More Tool Variants (MStV+)</ins> (&#x200A;<sub><a title="More Tool Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Tool Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)  
 <sup>[3]</sup>: Added by <ins>More Fishing Rod Variants (MStV+)</ins> (&#x200A;<sub><a title="More Fishing Rod Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-fishing-rod-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Fishing Rod Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)
 
-<h2><sub><sub><sup><ins>Download 1.4.15 + 1.21(.1)</ins>:</sup>&#x200A;
-<a title="Download (Modrinth):&#10;More Stick Variants 1.4.15 + 1.21(.1)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/xoxV7C08">
+<h2><sub><sub><sup><ins>Download 1.4.15 + 1.20.1</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Stick Variants 1.4.15 + 1.20.1" href="https://www.modrinth.com/mod/ZVv4e6pP/version/3cyDWMV8">
 <img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
-<a title="Download (Curseforge):&#10;1.4.15 + 1.21(.1) - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7933268">
+<a title="Download (Curseforge):&#10;1.4.15 + 1.20.1 - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7933257">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
 
