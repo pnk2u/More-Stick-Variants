@@ -5,14 +5,13 @@
   - Allow different wood variants of _Bows_<sup>[1]</sup>, _Crossbows_<sup>[1]</sup>, _Fishing Rods_<sup>[3]</sup> to combine their enchantments in an _Anvil_
     > Example:    
 ![Example image showing an _Anvil_ screen in which an _Acacia Diamond Axe_ and an _Oak Diamond Axe_ are being combined with the tooltips of both input items and the resulting item visible showing the combined enchantments and the wood variant of the first input determining the wood variant of the resulting item](https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/changelogs/1.5.6/combining_enchantments.png)  
-<sup>[1]</sup>: Added by <ins>More Weapon Variants (MStV+)</ins> (&#x200A;<sub><a title="More Weapon Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-weapon-variants"><img width=20 src="https://img.shields.io/badge/-%20-%230f91?style=flat&logo=modrinth"></a></sub><!--SEPARATOR_V:GH--><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"><sub><a title="More Weapon Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-weapon-variants"><img width=20 src="https://img.shields.io/badge/--%23f062?style=flat&logo=curseforge"></a></sub>&#x200A;)  
-<sup>[2]</sup>: Added by <ins>More Tool Variants (MStV+)</ins> (&#x200A;<sub><a title="More Tool Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a></sub><!--SEPARATOR_V:GH--><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"><sub><a title="More Tool Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)  
-<sup>[3]</sup>: Added by <ins>More Fishing Rod Variants (MStV+)</ins> (&#x200A;<sub><a title="More Fishing Rod Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-fishing-rod-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a></sub><!--SEPARATOR_V:GH--><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"><sub><a title="More Fishing Rod Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)
+<sup>[1]</sup>: Added by <ins>More Weapon Variants (MStV+)</ins> (&#x200A;<sub><a title="More Weapon Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-weapon-variants"><img width=20 src="https://img.shields.io/badge/-%20-%230f91?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Weapon Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-weapon-variants"><img width=20 src="https://img.shields.io/badge/--%23f062?style=flat&logo=curseforge"></a></sub>&#x200A;)  
+<sup>[2]</sup>: Added by <ins>More Tool Variants (MStV+)</ins> (&#x200A;<sub><a title="More Tool Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Tool Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)  
+<sup>[3]</sup>: Added by <ins>More Fishing Rod Variants (MStV+)</ins> (&#x200A;<sub><a title="More Fishing Rod Variants (MStV+)&#10;on Modrinth" href="https://modrinth.com/mod/more-fishing-rod-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Fishing Rod Variants (MStV+)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)
 
 <h2><sub><sub><sup><ins>Download 1.4.15 + 1.21.5(-10)</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More Stick Variants 1.4.15 + 1.21.5(-10)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/q0e81EzC">
-<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;1.4.15 + 1.21.5(-10) - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7933283">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
@@ -34,20 +33,18 @@
 
 <h2><sub><sub><sup><ins>Download 1.4.14 + 1.21.5(-10)</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More Stick Variants 1.4.14 + 1.21.5(-10)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/velTZbSL">
-<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;1.4.14 + 1.21.5(-10) - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7818905">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
 
 <a name="1.4.13"></a>
 ### 1.4.13:
-- `1.21.4`, `1.21.5(-10)`, `1.21.11`: Fix stick-based crafting recipe for _**Pale Oak** Stone Grindstone_ (from <ins>More Grindstone Variants</ins> (&#x200A;<sub><a title="More Grindstone Variants&#10;on Modrinth" href="https://modrinth.com/mod/more-grindstone-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a></sub><!--SEPARATOR_V--><img width=5 height=8 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"><sub><a title="More Grindstone Variants&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-grindstone-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)) resulting in a regular _**Dark Oak** Stone Grindstone_ (vanilla variant)
+- `1.21.4`, `1.21.5(-10)`, `1.21.11`: Fix stick-based crafting recipe for _**Pale Oak** Stone Grindstone_ (from <ins>More Grindstone Variants</ins> (&#x200A;<sub><a title="More Grindstone Variants&#10;on Modrinth" href="https://modrinth.com/mod/more-grindstone-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Grindstone Variants&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-grindstone-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;)) resulting in a regular _**Dark Oak** Stone Grindstone_ (vanilla variant)
 
 <h2><sub><sub><sup><ins>Download 1.4.13 + 1.21.5(-10)</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More Stick Variants 1.4.13 + 1.21.5(-10)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/5NwBEOc5">
-<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;1.4.13 + 1.21.5(-10) - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7323983">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
@@ -58,8 +55,7 @@
 
 <h2><sub><sub><sup><ins>Download 1.4.12 + 1.21.5(-10)</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More Stick Variants 1.4.12 + 1.21.5(-10)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/SRDMtKq1">
-<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;More Stick Variants 1.4.12 + 1.21.5(-10)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7253816">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
@@ -70,8 +66,7 @@
 
 <h2><sub><sub><sup><ins>Download 1.4.11 + 1.21.5(-11)</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More Stick Variants 1.4.11 + 1.21.5(-11)" href="https://www.modrinth.com/mod/ZVv4e6pP/version/yKwoTaT7">
-<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;More Stick Variants 1.4.11 + 1.21.5(-11)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7252250">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
@@ -82,8 +77,7 @@
 
 <h2><sub><sub><sup><ins>Download 1.4.10 + 1.21(.1)</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More Stick Variants 1.4.10 + 1.21(.1)" href="https://modrinth.com/mod/more-stick-variants/version/4TaX2Tva">
-<img width=26 src="https://img.shields.io/badge/-%20-%230f91?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%230f91?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;More Stick Variants 1.4.10 + 1.21(.1)" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/7168418">
 <img width=26 src="https://img.shields.io/badge/--%23f062?style=flat&logo=curseforge"></a>
   </sub></sub></h2>
