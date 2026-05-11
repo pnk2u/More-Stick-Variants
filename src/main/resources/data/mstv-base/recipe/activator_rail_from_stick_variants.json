@@ -1,4 +1,34 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:not" ,
+      "value": {
+        "condition": "fabric:any_mod_loaded" ,
+        "values": [
+          "quad-mstv-mtv",
+          "quad-mstv-mrailv"
+        ]
+      }
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:or",
+        "values": [
+          {
+            "type": "neoforge:mod_loaded",
+            "modid": "quad-mstv-mtv"
+          },
+          {
+            "type": "neoforge:mod_loaded",
+            "modid": "quad-mstv-mrailv"
+          }
+        ]
+      }
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "group": "activator_rail",
