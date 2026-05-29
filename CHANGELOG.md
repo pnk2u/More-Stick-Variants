@@ -1,4 +1,4 @@
-<!--publish=false-->
+<!--publish=true-->
 ### 1.4.18:
 - Add Turkish translation (Thanks to @[turkishtutel](https://www.github.com/turkishtutel))
 - Add Romanian translation (Thanks to @[turkishtutel](https://www.github.com/turkishtutel))
