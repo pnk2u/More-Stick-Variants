@@ -69,17 +69,16 @@ Currently available in:
 ### Versions
 <a name="most-recent-version"></a>
 <!--CHANGELOG:START-->
-<a name="1.4.17"></a>
-#### 1.4.17[*](#footnote-*):
-- Prevent some MStV+ recipes sometimes being overwritten by MStV's default recipes:
-  - <ins>More Rail Variants</ins> (&#x200A;<sub><a title="More Rail Variants&#10;on Modrinth" href="https://modrinth.com/mod/more-rail-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Rail Variants&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-rail-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;): _Rail_, _Powered Rail_, _Activator Rail_
-  - <ins>More Tool Variants</ins> (&#x200A;<sub><a title="More Tool Variants&#10;on Modrinth" href="https://modrinth.com/mod/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Tool Variants&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-tool-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;): _Brush_
-  - <ins>More Weapon Variants</ins> (&#x200A;<sub><a title="More Weapon Variants&#10;on Modrinth" href="https://modrinth.com/mod/more-weapon-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Weapon Variants&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-weapon-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;): _Crossbow_
+<a name="1.4.18"></a>
+#### 1.4.18[*](#footnote-*):
+- Add Turkish translation (Thanks to @[turkishtutel](https://www.github.com/turkishtutel))
+- Add Romanian translation (Thanks to @[turkishtutel](https://www.github.com/turkishtutel))
+- Fix incorrect resource condition in _Activator Rail_ recipe unlocking advancement
 
-<h2><sub><sub><sup><ins>Download 1.4.17 + 1.20.1</ins>:</sup>&#x200A;
-<a title="Download (Modrinth):&#10;More Stick Variants 1.4.17 + 1.20.1" href="https://www.modrinth.com/mod/ZVv4e6pP/version/KJCqDjd8">
+<h2><sub><sub><sup><ins>Download 1.4.18 + 1.20.1</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Stick Variants 1.4.18 + 1.20.1" href="https://www.modrinth.com/mod/ZVv4e6pP/version/iKx2nHlh">
 <img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
-<a title="Download (Curseforge):&#10;1.4.17 + 1.20.1 - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/8075712">
+<a title="Download (Curseforge):&#10;1.4.18 + 1.20.1 - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/8165654">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
 
