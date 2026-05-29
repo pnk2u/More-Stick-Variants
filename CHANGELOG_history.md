@@ -1,3 +1,16 @@
+<a name="1.4.18"></a>
+### 1.4.18:
+- Add Turkish translation (Thanks to @[turkishtutel](https://www.github.com/turkishtutel))
+- Add Romanian translation (Thanks to @[turkishtutel](https://www.github.com/turkishtutel))
+- Fix incorrect resource condition in _Activator Rail_ recipe unlocking advancement
+
+<h2><sub><sub><sup><ins>Download 1.4.18 + 1.21.4</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Stick Variants 1.4.18 + 1.21.4" href="https://www.modrinth.com/mod/ZVv4e6pP/version/7VBVuu4h">
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
+<a title="Download (Curseforge):&#10;1.4.18 + 1.21.4 - More Stick Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/files/8165673">
+<img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
+</sub></sub></h2>
+
 <a name="1.4.17"></a>
 ### 1.4.17:
 - Prevent some MStV+ recipes sometimes being overwritten by MStV's default recipes:
