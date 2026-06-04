@@ -58,6 +58,7 @@ loom {
         useLegacyMixinAp = true
     }
     accessWidenerPath = file("src/main/resources/mstv-base.accesswidener")
+    log4jConfigs.from(file("log4j.xml"))
 }
 
 dependencies {
