@@ -20,5 +20,6 @@ pluginManagement {
 	}
 
 	plugins {
+		id 'dev.isxander.mtk.modrepos' version '0.1.2'
 	}
 }

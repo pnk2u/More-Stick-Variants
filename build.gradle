@@ -25,10 +25,12 @@ buildscript {
     }
 }
 plugins {
+    id 'dev.isxander.mtk.modrepos'
 }
 
 apply plugin: "${loomPluginGroupId}"
 apply from: "versions.gradle"
+apply plugin: "dev.isxander.mtk.modrepos"
 
 def getMinecraftVersionName(){
     String key = 'minecraft_version_name'
@@ -43,14 +45,8 @@ base {
 }
 
 repositories {
-    maven {
-        name = 'ParchmentMC'
-        url = 'https://maven.parchmentmc.org'
-    }
-    maven {
-        name = 'Modrinth'
-        url = 'https://api.modrinth.com/maven'
-    }
+    parchment()
+    modrinthApi.exclusive()
 }
 
 loom {
