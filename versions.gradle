@@ -5,11 +5,12 @@ import org.codehaus.groovy.runtime.MethodClosure
 static def getFabricLoom(gameVersion) {
 	def pluginId = getLoomPluginId(gameVersion)
 	def isRemap = pluginId == 'fabric-loom-remap'
-	def groupId = isRemap ? "net.fabricmc.${pluginId}" : "net.fabricmc"
-	def artifactId = isRemap ? "net.fabricmc.${pluginId}.gradle.plugin" : "${pluginId}"
+	def baseId = "net.fabricmc.${pluginId}"
+	def groupId = isRemap ? baseId : "net.fabricmc"
+	def artifactId = isRemap ? "${baseId}.gradle.plugin" : "${pluginId}"
 	def version = getLatestLoomVersion(groupId, artifactId)
 
-	return [groupId, artifactId, version]
+	return [groupId, artifactId, version, baseId]
 }
 
 static def getLatestLoomVersion(groupId, artifactId) {
