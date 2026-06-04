@@ -1,7 +1,7 @@
 buildscript {
     repositories {maven {url = 'https://maven.fabricmc.net/'}}
     apply from: "versions.gradle"
-    def (loomGroupId, loomArtifactId, loomVersion) = getFabricLoom(project.minecraft_version)
+    def (loomGroupId, loomArtifactId, loomVersion, loomBaseId) = getFabricLoom(project.minecraft_version)
     def minecraftRelease = getMinecraftReleaseVersion(minecraft_version)
     def (fabricLoaderVersion, minFabricLoaderVersion, fabricApiVersion) = getLatestFabricVersions(minecraftRelease)
     def (minMinecraftVersionExcl, maxMinecraftVersionExcl) = getMinecraftVersionExclRange(minecraft_version_min_excl, minecraft_version_max_excl)
@@ -10,7 +10,7 @@ buildscript {
         classpath "$loomGroupId:$loomArtifactId:$loomVersion"
     }
     ext {
-        ext.loomPluginGroupId = loomGroupId
+        ext.loomPluginBaseId = loomBaseId
         ext.minecraftRelease = minecraftRelease
         ext.fabricLoaderVersion = fabricLoaderVersion
         ext.minFabricLoaderVersion = minFabricLoaderVersion
@@ -25,7 +25,7 @@ plugins {
     id 'dev.isxander.mtk.modrepos'
 }
 
-apply plugin: "${loomPluginGroupId}"
+apply plugin: "${loomPluginBaseId}"
 apply from: "versions.gradle"
 apply plugin: "dev.isxander.mtk.modrepos"
 
