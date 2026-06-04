@@ -1,5 +1,5 @@
 pluginManagement {
-	apply from: "latest-loom.gradle"
+	apply from: "versions.gradle"
 
 	repositories {
 		maven {
@@ -10,7 +10,16 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 
+	resolutionStrategy {
+		eachPlugin {
+			if (requested.id.id == "fabric-loom" || requested.id.id == "net.fabricmc.fabric-loom-remap.gradle.plugin") {
+				def (groupId, artifactId, version) = getFabricLoom(settings.minecraft_version)
+				useModule "$groupId:$artifactId:$version"
+			}
+		}
+	}
+
 	plugins {
-		id "net.fabricmc.fabric-loom" version loomVersion
+		id 'dev.isxander.mtk.modrepos' version '0.1.2'
 	}
 }

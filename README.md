@@ -52,10 +52,14 @@
 <a name="translations"></a>
 ### <img height="24" align="left" src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/translate.svg"> Translations
 
-Currently available in:
-- English
-- German
-- Ukrainian (@[StarmanMine142](/../../../../StarmanMine142) with [PR #6](../../pull/6)/[7](../../pull/7), added in [`1.3.1`](./CHANGELOG_history.md#1.3.1))
+|Language|Translator|
+|--|--|
+|English||
+|German||
+|Language|@[translator-gh](/../../../../translator-gh) with [PR #1](../../pull/1), added in [`1.2.3`](./CHANGELOG_history.md#1.2.3)|
+|Ukrainian|@[StarmanMine142](/../../../../StarmanMine142) with [PR #6](../../pull/6)/[7](../../pull/7), added in [`1.3.1`](./CHANGELOG_history.md#1.3.1)|
+|Turkish|@[turkishtutel](https://www.github.com/turkishtutel) with [197cccc](../../commit/197cccc), added in [`1.4.18`](./CHANGELOG.md#1.4.18)|
+|Romanian|@[turkishtutel](https://www.github.com/turkishtutel) with [e755649](../../commit/e755649), added in [`1.4.18`](./CHANGELOG.md#1.4.18)|
 
 > [!NOTE]
 > > Want to help translate? If you can, please open a PR to the **default branch** [`1.21(.1)`](../../tree/1.21(.1)).  
