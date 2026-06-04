@@ -2,7 +2,7 @@
   "required": false,
   "minVersion": "0.8",
   "package": "de.pnku.mstv_base.trade.mixin",
-  "compatibilityLevel": "JAVA_${java_version}",
+  "compatibilityLevel": "JAVA_${javaVersion}",
   "mixins": [
     "AbstractVillagerMixin"
   ],
