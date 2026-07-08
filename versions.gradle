@@ -1,0 +1,123 @@
+import groovy.json.JsonSlurper
+import groovy.xml.XmlSlurper
+import org.codehaus.groovy.runtime.MethodClosure
+
+static def getFabricLoom(gameVersion) {
+	def pluginId = getLoomPluginId(gameVersion)
+	def isRemap = pluginId == 'fabric-loom-remap'
+	def baseId = "net.fabricmc.${pluginId}"
+	def groupId = isRemap ? baseId : "net.fabricmc"
+	def artifactId = isRemap ? "${baseId}.gradle.plugin" : "${pluginId}"
+	def version = getLatestLoomVersion(groupId, artifactId)
+
+	return [groupId, artifactId, version, baseId]
+}
+
+static def getLatestLoomVersion(groupId, artifactId) {
+	def groupInUrl = groupId.replace('.', '/')
+	def url = "https://maven.fabricmc.net/${groupInUrl}/${artifactId}/maven-metadata.xml"
+	try {
+		def metadata = new XmlSlurper().parse(url)
+		def versions = metadata.versioning.versions.version*.text()
+		def snapshots = versions.findAll { it ==~ /\d+(\.\d+)*-SNAPSHOT/ }
+		return snapshots.last()
+	} catch (Exception e) {
+		throw new GradleException("Failed to fetch ${url}: ${e.message}")
+	}
+}
+
+static def getLoomPluginId(gameVersion) {
+	def majorVersion = gameVersion.toString().split('\\.')[0] as Integer
+	return majorVersion > 1 ? 'fabric-loom' : 'fabric-loom-remap'
+}
+
+def getMinecraftReleaseVersion(minecraftVersion) {
+	def releaseVersion = "$minecraftVersion".replaceAll(/[^0-9.].*/, '')
+	if ("$minecraftVersion" != releaseVersion) {
+		println "===\nResolved \"$minecraftVersion\" as \"$releaseVersion\" for Fabric and Parchment.\n==="
+	}
+	return releaseVersion
+}
+
+static def getPreviousMinorVersion(String input) {
+	def parts = input.split('\\.')
+	if (parts.length < 2) throw new IllegalArgumentException("Invalid version: ${input}")
+	def major = parts[0] as Integer
+	def minor = (parts[1] as Integer) - 1
+	return "${major}.${minor}.0"
+}
+
+static def getMinecraftVersionExclRange(lower, upper) {
+	def min = lower ? lower : getPreviousMinorVersion(lower)
+	def max = upper ? upper.toString() : '99.0.0'
+	return [min, max]
+}
+
+def getLatestFabricVersions(releaseVersion) {
+	def fApiXmlUrl = 'https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/maven-metadata.xml'
+	def fLoaderJsonUrl = 'https://meta.fabricmc.net/v2/versions/loader'
+
+	def fLoaderJson = new JsonSlurper().parseText(new URI(fLoaderJsonUrl).toURL().text)
+	def fLoaderLatestVersion = fLoaderJson.first().version
+	println "Fabric Loader: $fLoaderLatestVersion"
+
+	try {
+		def versions = new XmlSlurper().parse(fApiXmlUrl).versioning.versions.version*.text()
+		def fApiLatestVersion = versions.findAll { it ==~ /\d+(\.\d+)*.$releaseVersion/ }.last()
+		println "Fabric Api: $fApiLatestVersion"
+		return [fLoaderLatestVersion, getPreviousMinorVersion(fLoaderLatestVersion), fApiLatestVersion]
+	} catch (Exception e) {
+		throw new GradleException("Failed to fetch $fApiXmlUrl: ${e.message}")
+	}
+}
+
+def getLatestParchmentVersions(releaseVersion) {
+	def url = 'https://versioning.parchmentmc.org/versions'
+	def response
+	try {
+		response = new URI(url).toURL().text
+		if (response.length() < 100) throw new Exception('Response too short')
+	} catch (Exception e) {
+		println "Loading local fallback due to: ${e.message}"
+		response = new File('../../resources/versioning.parchmentmc.org/versions').text
+	}
+
+	def releases = new JsonSlurper().parseText(response).releases
+	def versionParts = releaseVersion.toString().split('\\.')
+	if (versionParts.size() == 2) versionParts << '0'
+	if (versionParts.size() < 2 || versionParts.size() > 3) {
+		throw new GradleException("Invalid Minecraft version format: ${releaseVersion}")
+	}
+
+	def (major, minor, patch) = versionParts.collect { it as Integer }
+	while (!releases["${major}.${minor}.${patch}"]) {
+		if (patch > 0) patch--
+		else {
+			if (minor == 0) break
+			minor--
+			patch = 99
+		}
+	}
+
+	def foundVersion = "${major}.${minor}.${patch}"
+	if (!releases[foundVersion]) {
+		throw new GradleException("No valid Parchment version found for $releaseVersion or earlier.")
+	}
+
+	def parchmentDate = releases[foundVersion]
+	println("Parchment: ${foundVersion} + ${parchmentDate}")
+	return [foundVersion, parchmentDate]
+}
+
+static def getJavaVersions(releaseVersion) {
+	def javaVersion = "$releaseVersion".startsWith('1.20') ? 17 : ("$releaseVersion".startsWith('1.21') ? 21 : 25)
+	def javaVersionEnum = JavaVersion.toVersion(javaVersion)
+	return [javaVersion, javaVersionEnum]
+}
+
+ext.getFabricLoom = this.&getFabricLoom as MethodClosure
+ext.getMinecraftReleaseVersion = this.&getMinecraftReleaseVersion as MethodClosure
+ext.getLatestFabricVersions = this.&getLatestFabricVersions as MethodClosure
+ext.getLatestParchmentVersions = this.&getLatestParchmentVersions as MethodClosure
+ext.getJavaVersions = this.&getJavaVersions as MethodClosure
+ext.getMinecraftVersionExclRange = this.&getMinecraftVersionExclRange as MethodClosure
