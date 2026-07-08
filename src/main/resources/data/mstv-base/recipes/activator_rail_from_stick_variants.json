@@ -6,7 +6,7 @@
     {
       "condition": "fabric:not" ,
       "value": {
-        "condition": "fabric:any_mods_loaded" ,
+        "condition": "fabric:any_mod_loaded" ,
         "values": [
           "quad-mstv-mtv",
           "quad-mstv-mrailv"
