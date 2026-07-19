@@ -1,16 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "group": "sticks",
-  "key": {
-    "W": "minecraft:oak_planks"
-  },
-  "pattern": [
-    "W",
-    "W"
+  "ingredients": [
+      "#mstv-base:mstv_stick_variants"
   ],
   "result": {
-    "count": 4,
+    "count": 1,
     "id": "minecraft:stick"
   }
 }
