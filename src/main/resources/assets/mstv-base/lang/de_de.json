@@ -7,5 +7,9 @@
   "item.mstv-base.mangrove_stick": "Mangrovenholzstock" ,
   "item.mstv-base.cherry_stick": "Kirschholzstock" ,
   "item.mstv-base.crimson_stick": "Karmesinstock" ,
-  "item.mstv-base.warped_stick": "Wirrstock"
+  "item.mstv-base.warped_stick": "Wirrstock",
+  "tag.item.mstv-base.vanilla_stick_planks": "Bretter (→ Eichenholzstöcke)",
+  "tag.item.mstv-base.mstv_stick_variants": "Stockvarianten (von MStV)",
+  "tag.item.mstv-base.stick_variants": "Stockvarianten (für MStV+)",
+  "tag.item.mstv-base.sticks": "Alle Stöcke (einer je Vanilla-Holzart)"
 }
