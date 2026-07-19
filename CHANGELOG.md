@@ -1,4 +1,4 @@
-<!--publish=false-->
+<!--publish=true-->
 ### 1.4.20:
 - Implement _Tag Entry Removal_ in _(Vanilla/) **Oak** Stick_ recipe
   >  #### What this means:
