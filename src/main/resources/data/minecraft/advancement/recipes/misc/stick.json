@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#mstv-base:stick_variants"
+            "items": "#mstv-base:vanilla_stick_planks"
           }
         ]
       },
