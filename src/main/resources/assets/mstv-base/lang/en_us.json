@@ -7,5 +7,9 @@
   "item.mstv-base.jungle_stick": "Jungle Stick",
   "item.mstv-base.mangrove_stick": "Mangrove Stick",
   "item.mstv-base.spruce_stick": "Spruce Stick",
-  "item.mstv-base.warped_stick": "Warped Stick"
+  "item.mstv-base.warped_stick": "Warped Stick",
+  "tag.item.mstv-base.vanilla_stick_planks": "Planks (→ Oak Sticks)",
+  "tag.item.mstv-base.mstv_stick_variants": "Stick Variants added by MStV",
+  "tag.item.mstv-base.stick_variants": "Stick Variants used by MStV+",
+  "tag.item.mstv-base.sticks": "All Sticks (one for each Vanilla Wood Type)"
 }

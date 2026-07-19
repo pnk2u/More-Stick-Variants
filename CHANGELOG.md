@@ -8,3 +8,4 @@
   >   - <ins>1.20.1</ins>: [`0.92.11+1.20.1`](https://modrinth.com/mod/fabric-api/version/0.92.11+1.20.1)
   >   - <ins>1.21.1</ins>: [`0.116.14+1.21.1`](https://modrinth.com/mod/fabric-api/version/0.116.14+1.21.1)
   >   - <ins>1.21.11</ins>: [`0.141.5+1.21.11`](https://modrinth.com/mod/fabric-api/version/0.141.5+1.21.11)
+- Added English and German translations for included _Item Tags_
